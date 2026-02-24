@@ -126,7 +126,6 @@ function CapItem({ cap, detail }) {
 /* ─── HERO ────────────────────────────────────────────────────── */
 /* ─── FLOATING NAV ──────────────────────────────────────── */
 function FloatingNav() {
-  const [mobileOpen, setMobileOpen] = useState(false);
   const links = [
     { label: "The Pattern", href: "#pattern" },
     { label: "Capital Formation", href: "#capital" },
@@ -136,137 +135,63 @@ function FloatingNav() {
     { label: "Let’s Talk", href: "#contact" },
   ];
   return (
-    <>
-      <nav style={{
-        position: "fixed",
-        top: 0,
-        left: 0,
-        right: 0,
-        zIndex: 1000,
-        background: "rgba(255,255,255,0.92)",
-        backdropFilter: "blur(12px)",
-        WebkitBackdropFilter: "blur(12px)",
-        borderBottom: `1px solid ${BORDER}`,
+    <nav style={{
+      position: "fixed",
+      top: 0,
+      left: 0,
+      right: 0,
+      zIndex: 1000,
+      background: "rgba(255,255,255,0.92)",
+      backdropFilter: "blur(12px)",
+      WebkitBackdropFilter: "blur(12px)",
+      borderBottom: `1px solid ${BORDER}`,
+    }}>
+      <div style={{
+        maxWidth: "1100px",
+        margin: "0 auto",
+        padding: "10px clamp(24px, 6vw, 80px)",
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "space-between",
+        gap: "clamp(12px, 2vw, 24px)",
       }}>
+        <a href="#" onClick={(e) => { e.preventDefault(); window.scrollTo({ top: 0, behavior: "smooth" }); }} style={{
+          display: "block",
+          flexShrink: 0,
+        }}>
+          <img
+            src="/LR3.png"
+            alt="Leo Raderman"
+            style={{
+              width: "32px",
+              height: "32px",
+              borderRadius: "4px",
+              objectFit: "cover",
+              display: "block",
+            }}
+          />
+        </a>
         <div style={{
-          maxWidth: "1100px",
-          margin: "0 auto",
-          padding: "10px clamp(24px, 6vw, 80px)",
           display: "flex",
           alignItems: "center",
-          justifyContent: "space-between",
-          gap: "clamp(12px, 2vw, 24px)",
-        }}>
-          <a href="#" onClick={(e) => { e.preventDefault(); window.scrollTo({ top: 0, behavior: "smooth" }); }} style={{
-            display: "block",
-            flexShrink: 0,
-          }}>
-            <img
-              src="/LR3.png"
-              alt="Leo Raderman"
-              style={{
-                width: "32px",
-                height: "32px",
-                borderRadius: "4px",
-                objectFit: "cover",
-                display: "block",
-              }}
-            />
-          </a>
-          {/* Desktop links */}
-          <div className="nav-links-desktop" style={{
-            display: "flex",
-            alignItems: "center",
-            gap: "clamp(16px, 2.5vw, 32px)",
-            flexWrap: "nowrap",
-          }}>
-            {links.map((link, i) => (
-              <a key={i} href={link.href} style={{
-                fontSize: "clamp(9px, 1.1vw, 11px)",
-                letterSpacing: "0.15em",
-                textTransform: "uppercase",
-                color: ACCENT,
-                textDecoration: "none",
-                fontWeight: 600,
-                fontFamily: "'DM Sans', sans-serif",
-                whiteSpace: "nowrap",
-              }}>{link.label}</a>
-            ))}
-          </div>
-          {/* Mobile hamburger */}
-          <button
-            className="nav-hamburger"
-            onClick={() => setMobileOpen(!mobileOpen)}
-            style={{
-              display: "none",
-              background: "none",
-              cursor: "pointer",
-              padding: "4px",
-              flexShrink: 0,
-            }}
-          >
-            <div style={{
-              width: "20px",
-              height: "2px",
-              background: ACCENT,
-              marginBottom: mobileOpen ? "0" : "5px",
-              transform: mobileOpen ? "rotate(45deg) translate(2.5px, 2.5px)" : "none",
-              transition: "all 0.3s ease",
-            }} />
-            <div style={{
-              width: "20px",
-              height: "2px",
-              background: ACCENT,
-              opacity: mobileOpen ? 0 : 1,
-              marginBottom: mobileOpen ? "0" : "5px",
-              transition: "all 0.3s ease",
-            }} />
-            <div style={{
-              width: "20px",
-              height: "2px",
-              background: ACCENT,
-              transform: mobileOpen ? "rotate(-45deg) translate(2.5px, -2.5px)" : "none",
-              transition: "all 0.3s ease",
-            }} />
-          </button>
-        </div>
-      </nav>
-      {/* Mobile dropdown */}
-      <div className="nav-mobile-dropdown" style={{
-        position: "fixed",
-        top: "53px",
-        left: 0,
-        right: 0,
-        zIndex: 999,
-        background: "rgba(255,255,255,0.97)",
-        backdropFilter: "blur(12px)",
-        WebkitBackdropFilter: "blur(12px)",
-        borderBottom: `1px solid ${BORDER}`,
-        maxHeight: mobileOpen ? "400px" : "0",
-        overflow: "hidden",
-        transition: "max-height 0.3s ease",
-        display: "none",
-      }}>
-        <div style={{
-          padding: "16px clamp(24px, 6vw, 80px)",
-          display: "flex",
-          flexDirection: "column",
-          gap: "16px",
+          gap: "clamp(16px, 2.5vw, 32px)",
+          flexWrap: "wrap",
         }}>
           {links.map((link, i) => (
-            <a key={i} href={link.href} onClick={() => setMobileOpen(false)} style={{
-              fontSize: "12px",
+            <a key={i} href={link.href} style={{
+              fontSize: "clamp(9px, 1.1vw, 11px)",
               letterSpacing: "0.15em",
               textTransform: "uppercase",
               color: ACCENT,
               textDecoration: "none",
               fontWeight: 600,
               fontFamily: "'DM Sans', sans-serif",
+              whiteSpace: "nowrap",
             }}>{link.label}</a>
           ))}
         </div>
       </div>
-    </>
+    </nav>
   );
 }
 
@@ -1228,7 +1153,7 @@ function ContactSection() {
 export default function App() {
   return (
     <>
-      <style>{`@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&family=Instrument+Serif:ital@0;1&display=swap'); *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; } html { scroll-behavior: smooth; scroll-padding-top: 56px; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; } body { background: ${WHITE}; color: ${DARK}; overflow-x: hidden; } button { border: none; outline: none; } a:hover { opacity: 0.85; } button:hover { opacity: 0.9; } ::selection { background: ${ACCENT_LIGHT}; color: ${DARK}; } .nav-links-desktop { display: flex; } .nav-hamburger { display: none !important; } .nav-mobile-dropdown { display: none !important; } @media (max-width: 768px) { .nav-links-desktop { display: none !important; } .nav-hamburger { display: flex !important; } .nav-mobile-dropdown { display: block !important; } }`}</style>
+      <style>{`@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&family=Instrument+Serif:ital@0;1&display=swap'); *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; } html { scroll-behavior: smooth; scroll-padding-top: 56px; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; } body { background: ${WHITE}; color: ${DARK}; overflow-x: hidden; } button { border: none; outline: none; } a:hover { opacity: 0.85; } button:hover { opacity: 0.9; } ::selection { background: ${ACCENT_LIGHT}; color: ${DARK}; }`}</style>
       <div style={{ background: WHITE, minHeight: "100vh", width: "100%" }}>
         <div style={{ maxWidth: "1100px", margin: "0 auto" }}>
           <FloatingNav />
