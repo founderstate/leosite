@@ -270,7 +270,7 @@ function PatternSection() {
       company: "IFILM",
       role: "Founder, CEO",
       industry: "Internet video / digital media",
-      outcome: "Sold to Viacom for $100M+ \u2014 six years before YouTube existed",
+      outcome: "IFILM.com sold to Viacom for $49M. Total IFILM enterprise exceeded $100M. DreamWorks\u2019 PopCom (Katzenberg, Geffen, Spielberg) and Imagine Entertainment (Grazer, Howard) folded their online video efforts into IFILM. Six years before YouTube existed",
       video: "https://vimeo.com/79609746",
     },
     {
@@ -702,7 +702,7 @@ function CapabilitiesSection() {
 /* ─── PRESS & MEDIA ─────────────────────────────────────── */
 function PressSection() {
   const press = [
-    { name: "The New York Times", url: "https://www.nytimes.com/1999/08/06/movies/at-the-movies-getting-cozy-on-the-internet.html" },
+    { name: "The New York Times", url: "https://www.nytimes.com/1999/12/20/movies/technology-media-film-s-digital-potential-has-hollywood-on-edge.html" },
     { name: "The Wall Street Journal", url: null },
     { name: "Variety", url: "https://variety.com/2002/digital/markets-festivals/you-are-surrounded-by-obscura-1117868217/" },
     { name: "The Hollywood Reporter", url: null },
@@ -785,7 +785,19 @@ function PressSection() {
       </div>
 
       <FadeIn delay={0.3}>
-        <div style={{ maxWidth: "480px" }}>
+        <div style={{
+          marginTop: "clamp(40px, 6vw, 56px)",
+          maxWidth: "560px",
+        }}>
+          <div style={{
+            fontSize: "clamp(10px, 1.2vw, 12px)",
+            letterSpacing: "0.2em",
+            textTransform: "uppercase",
+            color: ACCENT,
+            fontWeight: 600,
+            marginBottom: "12px",
+            fontFamily: "'DM Sans', sans-serif",
+          }}>Full Career Documentation</div>
           <a href="https://grokipedia.com/page/rodger_raderman" target="_blank" rel="noopener noreferrer" style={{
             display: "inline-flex",
             alignItems: "center",
@@ -798,42 +810,33 @@ function PressSection() {
             borderBottom: `1px solid ${ACCENT}`,
             paddingBottom: "2px",
           }}>
-            Full career documentation {"\u2014"} 40+ citations on Grokipedia {"\u2192"}
+            40+ citations on Grokipedia {"\u2192"}
           </a>
         </div>
       </FadeIn>
-    </section>
-  );
-}
 
-/* ─── HONORS & RECOGNITION ──────────────────────────────── */
-function HonorsSection() {
-  const honors = [
-    { label: "Hollywood Reporter", detail: "\u201C35 Under 35\u201D" },
-    { label: "GQ", detail: "\u201CMan of the Month\u201D" },
-    { label: "Red Herring", detail: "Cover \u2014 photographed by Helmut Newton" },
-    { label: "City of Los Angeles", detail: "Mayor Riordan declared \u201CIFILM Day\u201D" },
-  ];
-  return (
-    <section style={{
-      padding: "clamp(40px, 6vw, 80px) clamp(24px, 6vw, 80px)",
-      background: LIGHT_GRAY,
-    }}>
-      <FadeIn>
+      {/* Honors & Recognition */}
+      <FadeIn delay={0.4}>
         <div style={{
-          fontSize: "clamp(10px, 1.2vw, 12px)",
-          letterSpacing: "0.2em",
-          textTransform: "uppercase",
-          color: ACCENT,
-          fontWeight: 600,
-          marginBottom: "12px",
-          fontFamily: "'DM Sans', sans-serif",
-        }}>Honors & Recognition</div>
-      </FadeIn>
-      <div style={{ maxWidth: "560px" }}>
-        {honors.map((item, i) => (
-          <FadeIn key={i} delay={i * 0.06}>
-            <div style={{
+          marginTop: "clamp(40px, 6vw, 56px)",
+          maxWidth: "560px",
+        }}>
+          <div style={{
+            fontSize: "clamp(10px, 1.2vw, 12px)",
+            letterSpacing: "0.2em",
+            textTransform: "uppercase",
+            color: ACCENT,
+            fontWeight: 600,
+            marginBottom: "12px",
+            fontFamily: "'DM Sans', sans-serif",
+          }}>Honors & Recognition</div>
+          {[
+            { label: "Hollywood Reporter", detail: "\u201C35 Under 35\u201D" },
+            { label: "GQ", detail: "\u201CMan of the Month\u201D" },
+            { label: "Red Herring", detail: "Cover \u2014 photographed by Helmut Newton" },
+            { label: "City of Los Angeles", detail: "Mayor Riordan declared \u201CIFILM Day\u201D" },
+          ].map((item, i) => (
+            <div key={i} style={{
               display: "flex",
               justifyContent: "space-between",
               alignItems: "baseline",
@@ -854,9 +857,9 @@ function HonorsSection() {
                 fontFamily: "'DM Sans', sans-serif",
               }}>{item.detail}</span>
             </div>
-          </FadeIn>
-        ))}
-      </div>
+          ))}
+        </div>
+      </FadeIn>
     </section>
   );
 }
@@ -1031,7 +1034,6 @@ export default function App() {
           <CapitalSection />
           <CapabilitiesSection />
           <PressSection />
-          <HonorsSection />
           <WhySection />
           <ContactSection />
         </div>
