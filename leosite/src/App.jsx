@@ -265,7 +265,7 @@ function NumbersBar() {
 function PatternSection() {
   const items = [
     {
-      year: "1998",
+      year: "1998\u20132005",
       question: "\u201CWhat\u2019s internet video?\u201D",
       company: "IFILM",
       role: "Founder, CEO",
@@ -274,7 +274,7 @@ function PatternSection() {
       video: "https://vimeo.com/79609746",
     },
     {
-      year: "2000",
+      year: "2000\u20132017",
       question: "\u201CWhat\u2019s architectural projection mapping?\u201D",
       company: "Obscura Digital",
       role: "Co-Founder, CEO",
@@ -283,7 +283,7 @@ function PatternSection() {
       video: "https://vimeo.com/260863020",
     },
     {
-      year: "2005",
+      year: "2006\u20132008",
       question: "\u201CWhat\u2019s mobile video communication?\u201D",
       company: "Veeker",
       role: "Co-Founder, Chief Market & Product Officer",
@@ -292,7 +292,7 @@ function PatternSection() {
       video: "https://youtu.be/wSWtwIAzuyA",
     },
     {
-      year: "2008",
+      year: "2008\u20132013",
       question: "\u201CWhat\u2019s a physical-digital play pattern?\u201D",
       company: "Nukotoys",
       role: "Co-Founder, Co-CEO",
@@ -305,7 +305,7 @@ function PatternSection() {
       ],
     },
     {
-      year: "2010",
+      year: "2010\u2013Present",
       question: "\u201CHow can kids in developing countries be cured of clubfoot?\u201D",
       company: "MiracleFeet",
       role: "Co-Founder, Board Member",
@@ -356,7 +356,7 @@ function PatternSection() {
                 fontWeight: 600,
                 color: ACCENT,
                 fontFamily: "'DM Sans', sans-serif",
-                minWidth: "clamp(36px, 5vw, 48px)",
+                minWidth: "clamp(80px, 10vw, 110px)",
                 paddingTop: "4px",
                 letterSpacing: "0.02em",
               }}>{item.year}</div>
@@ -454,12 +454,14 @@ function PatternSection() {
               role: "Managing Director & Creative Director",
               question: "\u201CHow does a leading advertising company move into the digital world?\u201D",
               detail: "Employee #3",
+              years: "1997\u20131999",
             },
             {
               company: "Pretty Well Fit",
               role: "Managing Partner",
               question: "\u201CHow do I help founders make their vision a reality?\u201D",
               detail: "Strategic advisory for founders building what comes next",
+              years: "2023\u2013Present",
             },
           ].map((item, i) => (
             <div key={i} style={{
@@ -503,6 +505,16 @@ function PatternSection() {
                 marginTop: "4px",
                 fontFamily: "'DM Sans', sans-serif",
               }}>{item.detail}</div>
+              {item.years && (
+                <div style={{
+                  fontSize: "clamp(11px, 1.2vw, 12px)",
+                  color: ACCENT,
+                  marginTop: "4px",
+                  fontFamily: "'DM Sans', sans-serif",
+                  fontWeight: 600,
+                  letterSpacing: "0.02em",
+                }}>{item.years}</div>
+              )}
             </div>
           ))}
         </div>
