@@ -624,7 +624,7 @@ function PatternSection() {
               company: "Pretty Well Fit",
               role: "Managing Partner",
               question: "“What does it take to move from vision to reality?”",
-              detail: "Strategy through implementation — advisory and agency for founders building what comes next",
+              detail: "Strategy through implementation — advisory and agency for founders building what comes next.",
               years: "2023\u2013Present",
             },
           ].map((item, i) => (
