@@ -270,7 +270,7 @@ function PatternSection() {
       company: "IFILM",
       role: "Founder, CEO",
       industry: "Internet video / digital media",
-      outcome: "IFILM.com sold to Viacom for $49M. Total IFILM enterprise exceeded $100M. DreamWorks\u2019 PopCom (Katzenberg, Geffen, Spielberg) and Imagine Entertainment (Grazer, Howard) folded their online video efforts into IFILM. Six years before YouTube existed",
+      outcome: "Viacom acquired IFILM.com for $49M. Total IFILM enterprise asset sales exceeded $100M. DreamWorks\u2019 PopCom (Katzenberg, Geffen, Spielberg) and Imagine Entertainment (Grazer, Howard) folded their online video efforts into IFILM. Six years before YouTube existed",
       video: "https://vimeo.com/79609746",
     },
     {
@@ -279,7 +279,7 @@ function PatternSection() {
       company: "Obscura Digital",
       role: "Co-Founder, CEO",
       industry: "Immersive video / experiential technology",
-      outcome: "Sold to Madison Square Garden Company. Technology now powers The Sphere, Las Vegas",
+      outcome: "Company later acquired by Madison Square Garden Company. Core technology now powers The Sphere, Las Vegas",
       video: "https://vimeo.com/260863020",
     },
     {
@@ -562,12 +562,14 @@ function CapitalSection() {
           lineHeight: 1.6,
           maxWidth: "580px",
         }}>
+          The full capital formation lifecycle {"\u2014"} friends and family through VC,
+          strategic/corporate investors, term sheet negotiation, and exit.
           Presented to the full partnership at Kleiner Perkins. Pitched Sequoia,
           Benchmark, Andreessen Horowitz, Accel, NEA, DFJ, Bessemer, and nearly
-          every major fund on Sand Hill Road. The full capital formation
-          lifecycle {"\u2014"} friends and family through VC, strategic/corporate
-          investors, term sheet negotiation, and exit {"\u2014"} executed multiple
-          times across multiple industries.
+          every major fund on Sand Hill Road. Closed John Malone{"\u2019"}s Liberty Digital,
+          Roy Disney{"\u2019"}s Steamboat Ventures, Axiom Venture Partners, and Meritage Funds.
+          Strategic investments from Sony, Yahoo!, Eastman Kodak, Independent Film
+          Channel, Rainbow Media.
         </p>
       </FadeIn>
       <div style={{
@@ -637,7 +639,7 @@ function CapabilitiesSection() {
 
           <PhaseLabel>Negotiate & Close</PhaseLabel>
           <CapItem cap="Term Sheet Negotiation" detail="Protecting founder interests across valuation, dilution, control, and liquidation preference terms. Five companies, multiple rounds \u2014 seed through growth stages." />
-          <CapItem cap="Valuation Negotiation" detail="Stage-appropriate valuation benchmarking and negotiation strategy through exits at IFILM ($100M+ to Viacom) and Obscura Digital (to MSG)." />
+          <CapItem cap="Valuation Negotiation" detail="Stage-appropriate valuation benchmarking, cap table modeling, and negotiation strategy across seed, Series A, and growth rounds. Structured and negotiated valuations at IFILM, Nukotoys, and Veeker." />
 
           <PhaseLabel>Post-Close</PhaseLabel>
           <CapItem cap="Board Management & Governance" detail="Post-raise governance, board reporting, and investor relationship management. Managed Nukotoys board through growth; navigated complex IFILM investor dynamics." />
