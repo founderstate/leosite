@@ -622,6 +622,7 @@ function PatternSection() {
             },
             {
               company: "Pretty Well Fit",
+              url: "https://www.prettywellfit.com",
               role: "Managing Partner",
               question: "“What does it take to move from vision to reality?”",
               detail: "Strategy through implementation — advisory and agency for founders building what comes next.",
@@ -645,7 +646,7 @@ function PatternSection() {
                   fontWeight: 600,
                   color: DARK,
                   fontFamily: "'DM Sans', sans-serif",
-                }}>{item.company}</span>
+                }}>{item.url ? <a href={item.url} target="_blank" rel="noopener noreferrer" style={{ color: DARK, textDecoration: "none", borderBottom: `1px solid ${BORDER}` }}>{item.company}</a> : item.company}</span>
                 <span style={{
                   fontSize: "clamp(12px, 1.3vw, 13px)",
                   color: ACCENT,
@@ -678,6 +679,19 @@ function PatternSection() {
                   fontWeight: 600,
                   letterSpacing: "0.02em",
                 }}>{item.years}</div>
+              )}
+              {item.url && (
+                <a href={item.url} target="_blank" rel="noopener noreferrer" style={{
+                  display: "inline-flex",
+                  alignItems: "center",
+                  gap: "4px",
+                  fontSize: "clamp(12px, 1.3vw, 13px)",
+                  color: ACCENT,
+                  textDecoration: "none",
+                  fontWeight: 600,
+                  fontFamily: "'DM Sans', sans-serif",
+                  marginTop: "12px",
+                }}>Visit →</a>
               )}
             </div>
           ))}
