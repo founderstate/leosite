@@ -55,7 +55,7 @@ function Accordion({ title, children, defaultOpen = false }) {
           border: "none",
           cursor: "pointer",
           fontFamily: "'DM Sans', sans-serif",
-          fontSize: "clamp(14px, 1.6vw, 16px)",
+          fontSize: "clamp(15px, 1.7vw, 17px)",
           fontWeight: 600,
           color: DARK,
           textAlign: "left",
@@ -74,13 +74,28 @@ function Accordion({ title, children, defaultOpen = false }) {
         }}>+</span>
       </button>
       <div style={{
-        maxHeight: open ? "2000px" : "0px",
+        maxHeight: open ? "4000px" : "0px",
         overflow: "hidden",
         transition: "max-height 0.5s ease",
       }}>
         <div style={{ paddingBottom: "24px" }}>{children}</div>
       </div>
     </div>
+  );
+}
+
+function PhaseLabel({ children }) {
+  return (
+    <div style={{
+      fontSize: "clamp(10px, 1.1vw, 11px)",
+      letterSpacing: "0.15em",
+      textTransform: "uppercase",
+      color: ACCENT,
+      fontWeight: 600,
+      fontFamily: "'DM Sans', sans-serif",
+      marginTop: "16px",
+      marginBottom: "8px",
+    }}>{children}</div>
   );
 }
 
@@ -162,7 +177,7 @@ function Hero() {
           fontFamily: "'Instrument Serif', Georgia, serif",
           maxWidth: "600px",
           fontStyle: "italic",
-        }}>Six companies that defined their categories {"\u2014"} before the categories existed.</h2>
+        }}>Five companies that defined their categories {"\u2014"} before the categories existed.</h2>
       </FadeIn>
       <FadeIn delay={0.35}>
         <p style={{
@@ -202,13 +217,13 @@ function Hero() {
 /* ─── NUMBERS BAR ───────────────────────────────────────── */
 function NumbersBar() {
   const stats = [
-    { number: "6", label: "Companies Founded" },
+    { number: "5", label: "Companies Founded" },
     { number: "$100M+", label: "Largest Exit" },
     { number: "$65M+", label: "Capital Raised" },
     { number: "5,000+", label: "Retail Locations" },
   ];
   return (
-    <section style={{
+    <section id="pattern" style={{
       background: DARK,
       padding: "clamp(40px, 6vw, 64px) clamp(24px, 6vw, 80px)",
     }}>
@@ -246,17 +261,62 @@ function NumbersBar() {
   );
 }
 
-/* ─── PATTERN TIMELINE ──────────────────────────────────── */
-function PatternTimeline() {
+/* ─── MERGED PATTERN + TRACK RECORD ─────────────────────── */
+function PatternSection() {
   const items = [
-    { year: "1998", question: "\u201CWhat\u2019s internet video?\u201D", company: "IFILM", outcome: "Sold to Viacom for $100M+ \u2014 six years before YouTube existed" },
-    { year: "2000", question: "\u201CWhat\u2019s architectural projection mapping?\u201D", company: "Obscura Digital", outcome: "Sold to MSG \u2014 technology now powers The Sphere, Las Vegas" },
-    { year: "2005", question: "\u201CWhat\u2019s mobile video communication?\u201D", company: "Veeker", outcome: "First to enable user-generated video clips for NBC News" },
-    { year: "2008", question: "\u201CWhat\u2019s a physical-digital play pattern?\u201D", company: "Nukotoys", outcome: "Product in 5,000+ retail locations including Apple, Walmart, Target" },
-    { year: "Now", question: "What category doesn\u2019t exist yet?", company: "Pretty Well Fit", outcome: "Strategic advisory for founders building what comes next" },
+    {
+      year: "1998",
+      question: "\u201CWhat\u2019s internet video?\u201D",
+      company: "IFILM",
+      role: "Founder, CEO",
+      industry: "Internet video / digital media",
+      outcome: "Sold to Viacom for $100M+ \u2014 six years before YouTube existed",
+      video: "https://vimeo.com/79609746",
+    },
+    {
+      year: "2000",
+      question: "\u201CWhat\u2019s architectural projection mapping?\u201D",
+      company: "Obscura Digital",
+      role: "Co-Founder, CEO",
+      industry: "Immersive video / experiential technology",
+      outcome: "Sold to Madison Square Garden Company. Technology now powers The Sphere, Las Vegas",
+      video: "https://vimeo.com/260863020",
+    },
+    {
+      year: "2005",
+      question: "\u201CWhat\u2019s mobile video communication?\u201D",
+      company: "Veeker",
+      role: "Co-Founder, Chief Market & Product Officer",
+      industry: "Cell phone photo and video platform",
+      outcome: "First to enable user-generated video clips for NBC News. Pre-FaceTime, pre-Instagram",
+      video: null,
+    },
+    {
+      year: "2008",
+      question: "\u201CWhat\u2019s a physical-digital play pattern?\u201D",
+      company: "Nukotoys",
+      role: "Co-Founder, Co-CEO",
+      industry: "Apps/video game and physical toys integration",
+      outcome: "5,000+ retail locations including Apple, Walmart, Target, Toys-R-Us, Barnes & Noble. VentureBeat Best Mobile App 2012. Parenting Magazine Best Toy 2012",
+      video: "https://vimeo.com/47917689",
+      extraVideos: [
+        { url: "https://vimeo.com/48104305", label: "Demo" },
+        { url: "https://vimeo.com/42738280", label: "Gameplay" },
+      ],
+    },
+    {
+      year: "2010",
+      question: "\u201CHow can kids in developing countries be cured of clubfoot?\u201D",
+      company: "MiracleFeet",
+      role: "Co-Founder, Board Member",
+      industry: "Non-profit / global healthcare",
+      outcome: "100,000+ children treated worldwide",
+      video: "https://youtu.be/cnZV21navZc",
+    },
   ];
+
   return (
-    <section id="pattern" style={{
+    <section style={{
       padding: "clamp(60px, 10vw, 120px) clamp(24px, 6vw, 80px)",
       background: WHITE,
     }}>
@@ -276,11 +336,11 @@ function PatternTimeline() {
           color: DARK,
           margin: "0 0 clamp(40px, 6vw, 64px) 0",
           fontFamily: "'Instrument Serif', Georgia, serif",
-          maxWidth: "600px",
+          maxWidth: "640px",
           lineHeight: 1.2,
-        }}>Every company entered a category before it existed.</h2>
+        }}>Five companies that entered their categories before the categories existed.</h2>
       </FadeIn>
-      <div style={{ maxWidth: "640px" }}>
+      <div style={{ maxWidth: "680px" }}>
         {items.map((item, i) => (
           <FadeIn key={i} delay={i * 0.08}>
             <div style={{
@@ -307,124 +367,144 @@ function PatternTimeline() {
                   color: DARK,
                   fontFamily: "'Instrument Serif', Georgia, serif",
                   lineHeight: 1.3,
-                  fontStyle: item.year !== "Now" ? "italic" : "normal",
+                  fontStyle: "italic",
                 }}>{item.question}</div>
                 <div style={{
-                  fontSize: "clamp(13px, 1.5vw, 15px)",
+                  fontSize: "clamp(15px, 1.7vw, 17px)",
                   color: DARK,
                   fontWeight: 600,
-                  marginTop: "6px",
+                  marginTop: "8px",
                   fontFamily: "'DM Sans', sans-serif",
                 }}>{item.company}</div>
                 <div style={{
-                  fontSize: "clamp(13px, 1.5vw, 15px)",
+                  fontSize: "clamp(12px, 1.3vw, 13px)",
+                  color: ACCENT,
+                  fontWeight: 600,
+                  marginTop: "2px",
+                  fontFamily: "'DM Sans', sans-serif",
+                }}>{item.role}</div>
+                <div style={{
+                  fontSize: "clamp(13px, 1.4vw, 14px)",
+                  color: GRAY,
+                  marginTop: "2px",
+                  fontFamily: "'DM Sans', sans-serif",
+                  lineHeight: 1.5,
+                }}>{item.industry}</div>
+                <div style={{
+                  fontSize: "clamp(13px, 1.4vw, 14px)",
                   color: GRAY,
                   marginTop: "4px",
                   fontFamily: "'DM Sans', sans-serif",
                   lineHeight: 1.5,
                 }}>{item.outcome}</div>
+                {item.video && (
+                  <div style={{
+                    marginTop: "8px",
+                    display: "flex",
+                    flexWrap: "wrap",
+                    gap: "12px",
+                    alignItems: "center",
+                  }}>
+                    <a href={item.video} target="_blank" rel="noopener noreferrer" style={{
+                      fontSize: "clamp(11px, 1.2vw, 13px)",
+                      color: ACCENT,
+                      textDecoration: "none",
+                      fontWeight: 600,
+                      fontFamily: "'DM Sans', sans-serif",
+                      letterSpacing: "0.05em",
+                    }}>Watch {"\u2192"}</a>
+                    {item.extraVideos && item.extraVideos.map((ev, j) => (
+                      <a key={j} href={ev.url} target="_blank" rel="noopener noreferrer" style={{
+                        fontSize: "clamp(11px, 1.2vw, 13px)",
+                        color: ACCENT,
+                        textDecoration: "none",
+                        fontWeight: 600,
+                        fontFamily: "'DM Sans', sans-serif",
+                        letterSpacing: "0.05em",
+                      }}>{ev.label} {"\u2192"}</a>
+                    ))}
+                  </div>
+                )}
               </div>
             </div>
           </FadeIn>
         ))}
       </div>
-    </section>
-  );
-}
 
-/* ─── COMPANIES TABLE ───────────────────────────────────── */
-function CompaniesSection() {
-  const companies = [
-    { name: "IFILM Corporation", period: "1998\u20132005", role: "Co-Founder", industry: "Internet video / digital media", outcome: "Sold to Viacom for $100M+" },
-    { name: "Obscura Digital", period: "2000\u20132016", role: "Co-Founder", industry: "Immersive video / experiential technology", outcome: "Sold to Madison Square Garden Company" },
-    { name: "Veeker", period: "", role: "Co-Founder", industry: "Mobile video communication", outcome: "First to enable user-generated video clips for NBC News" },
-    { name: "Nukotoys", period: "", role: "Co-Founder, Co-CEO", industry: "Physical-digital toy integration", outcome: "5,000+ retail locations nationwide" },
-    { name: "MiracleFeet", period: "", role: "Board Member", industry: "Non-profit / global healthcare", outcome: "100,000+ children treated worldwide" },
-    { name: "Pretty Well Fit", period: "", role: "Founder", industry: "Strategic advisory", outcome: "Active" },
-  ];
-  return (
-    <section style={{
-      padding: "clamp(60px, 10vw, 120px) clamp(24px, 6vw, 80px)",
-      background: LIGHT_GRAY,
-    }}>
-      <FadeIn>
+      {/* Additional */}
+      <FadeIn delay={0.5}>
         <div style={{
-          fontSize: "clamp(10px, 1.2vw, 12px)",
-          letterSpacing: "0.2em",
-          textTransform: "uppercase",
-          color: ACCENT,
-          fontWeight: 600,
-          marginBottom: "12px",
-          fontFamily: "'DM Sans', sans-serif",
-        }}>Track Record</div>
-        <h2 style={{
-          fontSize: "clamp(24px, 4vw, 40px)",
-          fontWeight: 300,
-          color: DARK,
-          margin: "0 0 clamp(40px, 6vw, 56px) 0",
-          fontFamily: "'Instrument Serif', Georgia, serif",
-          lineHeight: 1.2,
-        }}>Six companies. Six industries. 25 years.</h2>
-      </FadeIn>
-      <div style={{ maxWidth: "800px" }}>
-        {companies.map((c, i) => (
-          <FadeIn key={i} delay={i * 0.06}>
-            <div style={{
-              padding: "clamp(16px, 3vw, 24px) 0",
-              borderTop: `1px solid ${BORDER}`,
+          marginTop: "clamp(28px, 4vw, 40px)",
+          paddingTop: "clamp(28px, 4vw, 40px)",
+          borderTop: `1px solid ${BORDER}`,
+          maxWidth: "680px",
+        }}>
+          <div style={{
+            fontSize: "clamp(10px, 1.1vw, 11px)",
+            letterSpacing: "0.15em",
+            textTransform: "uppercase",
+            color: GRAY,
+            fontWeight: 600,
+            fontFamily: "'DM Sans', sans-serif",
+            marginBottom: "16px",
+          }}>Additional</div>
+          {[
+            {
+              company: "Saatchi & Saatchi Darwin Digital",
+              role: "Managing Director & Creative Director",
+              question: "\u201CHow does a leading advertising company move into the digital world?\u201D",
+              detail: "Employee #3",
+            },
+            {
+              company: "Pretty Well Fit",
+              role: "Managing Partner",
+              question: "\u201CHow do I help founders make their vision a reality?\u201D",
+              detail: "Strategic advisory for founders building what comes next",
+            },
+          ].map((item, i) => (
+            <div key={i} style={{
+              paddingBottom: "12px",
+              marginBottom: "12px",
+              borderBottom: i === 0 ? `1px solid ${BORDER}` : "none",
             }}>
               <div style={{
                 display: "flex",
                 justifyContent: "space-between",
-                alignItems: "flex-start",
+                alignItems: "baseline",
                 flexWrap: "wrap",
                 gap: "4px 16px",
               }}>
-                <div>
-                  <span style={{
-                    fontSize: "clamp(15px, 1.8vw, 17px)",
-                    fontWeight: 600,
-                    color: DARK,
-                    fontFamily: "'DM Sans', sans-serif",
-                  }}>{c.name}</span>
-                  {c.period && (
-                    <span style={{
-                      fontSize: "clamp(12px, 1.3vw, 13px)",
-                      color: GRAY,
-                      marginLeft: "8px",
-                      fontFamily: "'DM Sans', sans-serif",
-                    }}>{c.period}</span>
-                  )}
-                </div>
+                <span style={{
+                  fontSize: "clamp(14px, 1.6vw, 16px)",
+                  fontWeight: 600,
+                  color: DARK,
+                  fontFamily: "'DM Sans', sans-serif",
+                }}>{item.company}</span>
                 <span style={{
                   fontSize: "clamp(12px, 1.3vw, 13px)",
                   color: ACCENT,
                   fontWeight: 600,
                   fontFamily: "'DM Sans', sans-serif",
-                }}>{c.role}</span>
+                }}>{item.role}</span>
               </div>
+              {item.question && (
+                <div style={{
+                  fontSize: "clamp(14px, 1.6vw, 16px)",
+                  fontWeight: 300,
+                  color: DARK,
+                  fontFamily: "'Instrument Serif', Georgia, serif",
+                  fontStyle: "italic",
+                  marginTop: "4px",
+                }}>{item.question}</div>
+              )}
               <div style={{
                 fontSize: "clamp(13px, 1.4vw, 14px)",
                 color: GRAY,
                 marginTop: "4px",
                 fontFamily: "'DM Sans', sans-serif",
-                lineHeight: 1.5,
-              }}>{c.industry} {"\u2014"} {c.outcome}</div>
+              }}>{item.detail}</div>
             </div>
-          </FadeIn>
-        ))}
-      </div>
-      <FadeIn delay={0.4}>
-        <div style={{
-          marginTop: "clamp(20px, 3vw, 32px)",
-          padding: "16px 0",
-          borderTop: `1px solid ${BORDER}`,
-          fontSize: "clamp(13px, 1.4vw, 14px)",
-          color: GRAY,
-          fontFamily: "'DM Sans', sans-serif",
-          fontStyle: "italic",
-        }}>
-          Additional: Creator/Executive Producer, Mondo Magic {"\u2014"} A&E Networks television series ($250K production deal)
+          ))}
         </div>
       </FadeIn>
     </section>
@@ -435,13 +515,14 @@ function CompaniesSection() {
 function CapitalSection() {
   const investors = [
     "Sony Corporation", "Yahoo!", "Independent Film Channel",
-    "Roy Disney\u2019s Steamboat Ventures", "Paul Allen\u2019s Vulcan Ventures",
+    "Roy Disney\u2019s Steamboat Ventures",
+    "Eastman Kodak", "Rainbow Media (AMC Networks)", "Liberty Digital",
     "Axiom Venture Partners", "Meritage Funds", "OddLot Entertainment",
   ];
   return (
     <section style={{
       padding: "clamp(60px, 10vw, 120px) clamp(24px, 6vw, 80px)",
-      background: WHITE,
+      background: LIGHT_GRAY,
     }}>
       <FadeIn>
         <div style={{
@@ -467,18 +548,21 @@ function CapitalSection() {
           margin: "0 0 clamp(32px, 5vw, 48px) 0",
           fontFamily: "'DM Sans', sans-serif",
           lineHeight: 1.6,
-          maxWidth: "560px",
+          maxWidth: "580px",
         }}>
-          The full capital formation lifecycle {"\u2014"} friends and family through
-          institutional VC, strategic/corporate investors, term sheet negotiation,
-          and exit {"\u2014"} executed multiple times across multiple industries.
+          Presented to the full partnership at Kleiner Perkins. Pitched Sequoia,
+          Benchmark, Andreessen Horowitz, Accel, NEA, DFJ, Bessemer, and nearly
+          every major fund on Sand Hill Road. The full capital formation
+          lifecycle {"\u2014"} friends and family through VC, strategic/corporate
+          investors, term sheet negotiation, and exit {"\u2014"} executed multiple
+          times across multiple industries.
         </p>
       </FadeIn>
       <div style={{
         display: "flex",
         flexWrap: "wrap",
         gap: "10px",
-        maxWidth: "640px",
+        maxWidth: "680px",
       }}>
         {investors.map((inv, i) => (
           <FadeIn key={i} delay={i * 0.04}>
@@ -504,7 +588,7 @@ function CapabilitiesSection() {
   return (
     <section style={{
       padding: "clamp(60px, 10vw, 120px) clamp(24px, 6vw, 80px)",
-      background: LIGHT_GRAY,
+      background: WHITE,
     }}>
       <FadeIn>
         <div style={{
@@ -527,53 +611,83 @@ function CapabilitiesSection() {
       </FadeIn>
 
       <div style={{ maxWidth: "740px" }}>
+        {/* ── FUNDRAISING & CAPITAL FORMATION ── */}
         <Accordion title="Fundraising & Capital Formation" defaultOpen={true}>
-          <CapItem cap="Friends & Family Round Structuring" detail="Structured F&F raises with proper documentation, SAFE/convertible note guidance, and investor communication. Demonstrated at IFILM (initial capital) and Nukotoys (OddLot JV structure)." />
-          <CapItem cap="Angel Investor Identification & Pitch" detail="High-net-worth investor targeting, warm introduction strategy, and pitch development. IFILM angel round included Kevin Wendle (co-founder of FOX cable network and C|Net), introduced through Jim Schlueter at Morgan Stanley Private Wealth Management." />
-          <CapItem cap="Institutional VC Fundraising" detail="Full VC fundraising process \u2014 deck, data room, meeting sequencing, term sheet negotiation. IFILM Series A led by Axiom Venture Partners; Veeker funded by Meritage Funds." />
-          <CapItem cap="Strategic / Corporate Investor Relations" detail="Identifying and cultivating strategic investors who bring capital plus distribution, credibility, or operational value. IFILM attracted Sony, Yahoo!, IFC, Steamboat Ventures, and Vulcan Ventures." />
-          <CapItem cap="Term Sheet Negotiation" detail="Protecting founder interests across valuation, dilution, control, and liquidation preference terms. Six companies, multiple rounds \u2014 seed through growth stages." />
-          <CapItem cap="Investor Deck Creation & Pitch Delivery" detail="Institutional-grade pitch materials and presentation coaching. Pitched Sony, Yahoo!, Paul Allen\u2019s fund, and Toy Fair / board audiences." />
-          <CapItem cap="Board Management & Investor Communication" detail="Post-raise governance, board reporting, and investor relationship management. Managed Nukotoys board through growth; navigated complex IFILM investor dynamics." />
-          <CapItem cap="Valuation Negotiation" detail="Stage-appropriate valuation benchmarking and negotiation strategy through exits at IFILM ($100M+ to Viacom) and Obscura Digital (to MSG)." />
+          <PhaseLabel>Structure & Strategy</PhaseLabel>
           <CapItem cap="Capital Strategy & Staging" detail="Right-sizing raises, staging capital deployment, and matching capital strategy to business phase. Bootstrapped through $65M+ in raised capital across all ventures." />
+          <CapItem cap="Company / Round Structuring" detail="Entity selection, SAFE/convertible note guidance, and round documentation. Demonstrated at IFILM (initial capital structure) and Nukotoys (OddLot JV structure)." />
+          <CapItem cap="Investor Deck Creation" detail="Institutional-grade pitch materials for every stage. Pitched Sony, Yahoo!, Paul Allen\u2019s fund, Toy Fair audiences, and VC full partnerships." />
+
+          <PhaseLabel>Build the Room</PhaseLabel>
+          <CapItem cap="Angel Investor Identification & Pitch" detail="High-net-worth investor targeting and warm introduction strategy. IFILM angel round included Kevin Wendle (co-founder of FOX cable network and C|Net) via Morgan Stanley Private Wealth Management. Additional angels included Steven Spielberg, producing partner Kathleen Kennedy, and heads of major Hollywood talent agencies." />
+          <CapItem cap="VC Targeting & Sequencing" detail="Full VC fundraising process \u2014 data room, meeting sequencing, partner meetings through full partnership presentations. Presented to the full partnership at Kleiner Perkins. Pitched Sequoia, Benchmark, Andreessen Horowitz, Accel, NEA, DFJ, Bessemer, and nearly every major fund on Sand Hill Road. IFILM Series A led by Axiom Venture Partners; Veeker funded by Meritage Funds." />
+          <CapItem cap="Strategic & Corporate Investor Acquisition" detail="Identifying, pitching, and closing strategic investors who bring capital plus distribution, credibility, or operational value. Closed Sony, Yahoo!, IFC, Roy Disney\u2019s Steamboat Ventures, Eastman Kodak, and Rainbow Media (AMC Networks)." />
+
+          <PhaseLabel>Negotiate & Close</PhaseLabel>
+          <CapItem cap="Term Sheet Negotiation" detail="Protecting founder interests across valuation, dilution, control, and liquidation preference terms. Five companies, multiple rounds \u2014 seed through growth stages." />
+          <CapItem cap="Valuation Negotiation" detail="Stage-appropriate valuation benchmarking and negotiation strategy through exits at IFILM ($100M+ to Viacom) and Obscura Digital (to MSG)." />
+
+          <PhaseLabel>Post-Close</PhaseLabel>
+          <CapItem cap="Board Management & Governance" detail="Post-raise governance, board reporting, and investor relationship management. Managed Nukotoys board through growth; navigated complex IFILM investor dynamics." />
+          <CapItem cap="Investor Communication & Reporting" detail="Ongoing investor updates, milestone reporting, and relationship management across multiple simultaneous investor groups." />
         </Accordion>
 
+        {/* ── PRODUCT DEVELOPMENT & GO-TO-MARKET ── */}
         <Accordion title="Product Development & Go-to-Market">
+          <PhaseLabel>Conceive</PhaseLabel>
           <CapItem cap="New Category Creation" detail="Market education strategy, consumer mental model creation, and category positioning when no benchmarks exist. IFILM (online video before YouTube), Nukotoys (physical-digital play), Obscura (projection mapping)." />
+          <CapItem cap="Category Education / Market Creation" detail="Content strategy, media positioning, and messaging for products consumers don\u2019t have a mental model for. IFILM (explaining \u201Cinternet video\u201D in 1998), Nukotoys (explaining apps/video game and physical toys integration)." />
           <CapItem cap="Hardware / Software Integration" detail="Product strategy for companies combining physical and digital components. Nukotoys (physical cards + camera recognition + app), Obscura (projection hardware + content software)." />
-          <CapItem cap="Manufacturing Partner Management" detail="Vendor selection, relationship management, quality control, and cost negotiation. Nukotoys (toy manufacturing, Hong Kong Toy Fair), Obscura (display systems)." />
           <CapItem cap="Razor / Razorblade Model Design" detail="Recurring revenue model design \u2014 device + consumable, platform + content, or hardware + service. Nukotoys (free app + paid physical cards)." />
-          <CapItem cap="SKU Strategy & Product Line Architecture" detail="Product line planning, pricing tiers, bundle strategy, and margin optimization. Nukotoys (multiple card series, different price points)." />
+
+          <PhaseLabel>Build</PhaseLabel>
+          <CapItem cap="Manufacturing Partner Management" detail="Vendor selection, relationship management, quality control, and cost negotiation. Nukotoys (toy manufacturing, Hong Kong Toy Fair), Obscura (display systems)." />
+          <CapItem cap="SKU Strategy & Product Line Architecture" detail="Product line planning, pricing tiers, bundle strategy, and margin optimization. Nukotoys (multiple card series, different price points across five national retailers)." />
+
+          <PhaseLabel>Launch</PhaseLabel>
           <CapItem cap="Pre-Launch Brand Building" detail="Building brand awareness and credibility before product is available \u2014 creating demand before supply. IFILM (brand before platform launched), Nukotoys (Toy Fair before retail)." />
-          <CapItem cap="Category Education / Market Creation" detail="Content strategy, media positioning, and messaging for products consumers don\u2019t have a mental model for. IFILM (explaining \u201Cinternet video\u201D in 1998), Nukotoys (explaining physical-digital play)." />
           <CapItem cap="Trade Show Strategy & Execution" detail="Trade show planning, booth strategy, meeting scheduling, and post-show follow-up conversion. Nukotoys (Hong Kong Toy Fair, US Toy Fair)." />
           <CapItem cap="D2C E-Commerce" detail="Direct-to-consumer channel strategy, platform selection, and launch execution. Pretty Well Fit (cannabis wellness D2C)." />
         </Accordion>
 
+        {/* ── MARKETING, SALES & PARTNERSHIPS ── */}
         <Accordion title="Marketing, Sales & Partnerships">
+          <PhaseLabel>Brand & Story</PhaseLabel>
           <CapItem cap="Brand Creation & Naming" detail="Brand identity development from naming through visual system and voice. Obscura Digital (from da Vinci), Nukotoys, IFILM, Pretty Well Fit." />
-          <CapItem cap="PR & Earned Media" detail="Press strategy, media list development, journalist relationships, and earned media campaigns. IFILM coverage in NYT, WSJ, Variety, Hollywood Reporter, PBS, Fox News, GQ." />
+          <CapItem cap="PR & Earned Media" detail="Press strategy, media list development, journalist relationships, and earned media campaigns. Coverage in NYT, WSJ, Variety, Hollywood Reporter, Bloomberg, TechCrunch, Wired, CNET, LA Times, and many more." />
+          <CapItem cap="Creative Direction" detail="High-level creative oversight for brand campaigns, product launches, and visual identity. IFILM (Helmut Newton shoot), Obscura (Fortune 500 installations)." />
+          <CapItem cap="Content Marketing & SEO" detail="Organic acquisition strategy, content development, and conversion optimization. Pretty Well Fit and FounderState (landing pages, conversion optimization)." />
+
+          <PhaseLabel>Sell</PhaseLabel>
           <CapItem cap="Enterprise / B2B Sales" detail="B2B partnership development, enterprise sales process, and account management. Obscura (Fortune 500 clients), Nukotoys (national retail chains)." />
           <CapItem cap="Retail Buyer Relationships" detail="Retail channel entry strategy, buyer pitch development, and ongoing relationship management. Nukotoys achieved simultaneous distribution at Apple Stores, Walmart, Target, Toys-R-Us, Barnes & Noble." />
+          <CapItem cap="Channel Conflict Management" detail="Pricing and positioning strategies that protect partners while maintaining direct channels. Nukotoys (five national retail channels simultaneously)." />
+
+          <PhaseLabel>Partner</PhaseLabel>
           <CapItem cap="Strategic Partnership Structuring" detail="Partnership architecture \u2014 JVs, licensing, co-marketing, revenue share, and equity structures. Nukotoys/OddLot (JV), Nukotoys/PBS (education grant), IFILM/Sony/Yahoo!." />
           <CapItem cap="Licensing & Revenue Share Models" detail="IP monetization, licensing term negotiation, and revenue share structuring. Nukotoys (licensing IP for physical-digital play)." />
-          <CapItem cap="Channel Conflict Management" detail="Pricing and positioning strategies that protect partners while maintaining direct channels. Nukotoys (five national retail channels simultaneously)." />
-          <CapItem cap="Content Marketing & SEO" detail="Organic acquisition strategy, content development, and conversion optimization. Pretty Well Fit and FounderState (landing pages, conversion optimization)." />
-          <CapItem cap="Creative Direction" detail="High-level creative oversight for brand campaigns, product launches, and visual identity. IFILM (Helmut Newton shoot), Obscura (Fortune 500 installations), Mondo Magic (A&E series)." />
         </Accordion>
 
+        {/* ── LEGAL, OPERATIONS & COMPANY BUILDING ── */}
         <Accordion title="Legal, Operations & Company Building">
-          <CapItem cap="Company Formation & Entity Structuring" detail="Guidance on entity selection, formation, and restructuring as business evolves. Six companies \u2014 LLC, C-Corp, JV structures." />
+          <PhaseLabel>Form</PhaseLabel>
+          <CapItem cap="Company Formation & Entity Structuring" detail="Guidance on entity selection, formation, and restructuring as business evolves. Five companies \u2014 LLC, C-Corp, JV structures." />
           <CapItem cap="Co-Founder Agreements & Equity Splits" detail="Founder relationship structuring, equity allocation, and role definition. IFILM (with Luke McDonough), Nukotoys (Co-CEO with Doug Penman), Obscura (with Travis Threlkel)." />
           <CapItem cap="Joint Venture Structuring" detail="JV architecture, governance, economics, and exit provisions. Nukotoys/OddLot Entertainment 50/50 JV." />
+
+          <PhaseLabel>Protect</PhaseLabel>
           <CapItem cap="IP Protection Strategy" detail="Patent vs. trade secret analysis, trademark strategy, and IP portfolio management. Obscura (brand naming), Nukotoys (physical-digital play pattern protection)." />
-          <CapItem cap="Exit Negotiation & M&A" detail="Exit preparation, buyer identification, negotiation strategy, and deal execution. IFILM sale to Viacom ($100M+), Obscura sale to MSG." />
+
+          <PhaseLabel>Scale</PhaseLabel>
           <CapItem cap="Hiring & Team Building" detail="Organizational design, key hire identification, and team scaling strategy. IFILM (grew to 100+ employees), Nukotoys, Obscura, Saatchi & Saatchi." />
-          <CapItem cap="Pivot & Strategic Redirection" detail="Recognizing when to pivot, managing stakeholder communication, and executing strategic shifts. Veeker (pre-smartphone mobile video), Nukotoys (toy \u2192 education)." />
           <CapItem cap="Budget Management & Resource Allocation" detail="Capital deployment optimization, burn rate management, and resource prioritization across all ventures \u2014 bootstrapped through $65M+ in raised capital." />
+
+          <PhaseLabel>Navigate</PhaseLabel>
+          <CapItem cap="Exit Negotiation & M&A" detail="Exit preparation, buyer identification, negotiation strategy, and deal execution. IFILM sale to Viacom ($100M+), Obscura sale to MSG." />
+          <CapItem cap="Pivot & Strategic Redirection" detail="Recognizing when to pivot, managing stakeholder communication, and executing strategic shifts. Veeker (pre-smartphone mobile video), Nukotoys (toy \u2192 education)." />
         </Accordion>
 
+        {/* ── RETAIL DISTRIBUTION AT SCALE ── */}
         <Accordion title="Retail Distribution at Scale">
           <CapItem cap="Multi-Channel National Distribution" detail="Simultaneous retail distribution across five major national chains: Apple Stores, Walmart, Target, Toys-R-Us, and Barnes & Noble." />
           <CapItem cap="Buyer Relationship Management" detail="Managing fundamentally different buyer relationships, pricing strategies, merchandising requirements, and channel conflict dynamics \u2014 simultaneously across all channels." />
@@ -585,13 +699,18 @@ function CapabilitiesSection() {
   );
 }
 
-/* ─── MEDIA / RECOGNITION ───────────────────────────────── */
-function MediaSection() {
-  const press = ["The New York Times", "The Wall Street Journal", "Variety", "The Hollywood Reporter", "PBS", "Fox News", "GQ"];
+/* ─── PRESS & MEDIA ─────────────────────────────────────── */
+function PressSection() {
+  const press = [
+    "The New York Times", "The Wall Street Journal", "Variety",
+    "The Hollywood Reporter", "Bloomberg", "TechCrunch", "Wired",
+    "CNET", "LA Times", "PBS", "Fox News", "Ad Age", "GamesBeat",
+    "Communication Arts", "GQ",
+  ];
   return (
     <section style={{
       padding: "clamp(60px, 10vw, 120px) clamp(24px, 6vw, 80px)",
-      background: WHITE,
+      background: LIGHT_GRAY,
     }}>
       <FadeIn>
         <div style={{
@@ -602,7 +721,7 @@ function MediaSection() {
           fontWeight: 600,
           marginBottom: "12px",
           fontFamily: "'DM Sans', sans-serif",
-        }}>Recognition</div>
+        }}>Press & Media Profile</div>
         <h2 style={{
           fontSize: "clamp(24px, 4vw, 40px)",
           fontWeight: 300,
@@ -610,24 +729,25 @@ function MediaSection() {
           margin: "0 0 clamp(32px, 5vw, 48px) 0",
           fontFamily: "'Instrument Serif', Georgia, serif",
           lineHeight: 1.2,
-        }}>Press & media profile.</h2>
+        }}>Covered across technology, entertainment, and business media.</h2>
       </FadeIn>
 
       <div style={{
         display: "flex",
         flexWrap: "wrap",
-        gap: "12px",
-        marginBottom: "clamp(32px, 5vw, 48px)",
+        gap: "10px",
+        marginBottom: "clamp(24px, 4vw, 36px)",
+        maxWidth: "740px",
       }}>
         {press.map((p, i) => (
-          <FadeIn key={i} delay={i * 0.04}>
+          <FadeIn key={i} delay={i * 0.03}>
             <span style={{
               display: "inline-block",
-              padding: "10px 20px",
+              padding: "9px 18px",
               background: DARK,
               color: WHITE,
               borderRadius: "4px",
-              fontSize: "clamp(12px, 1.3vw, 14px)",
+              fontSize: "clamp(11px, 1.2vw, 13px)",
               fontFamily: "'DM Sans', sans-serif",
               fontWeight: 500,
             }}>{p}</span>
@@ -635,17 +755,56 @@ function MediaSection() {
         ))}
       </div>
 
-      <FadeIn delay={0.2}>
-        <div style={{ maxWidth: "560px" }}>
-          {[
-            { label: "Hollywood Reporter", detail: "\u201C35 Under 35\u201D" },
-            { label: "GQ", detail: "\u201CMan of the Month\u201D" },
-            { label: "City of Los Angeles", detail: "Mayor Riordan declared \u201CIFILM Day\u201D" },
-            { label: "Helmut Newton", detail: "Portrait photography" },
-            { label: "Saatchi & Saatchi", detail: "MD / Creative Director, Darwin Digital \u2014 Employee #3" },
-            { label: "Grokipedia", detail: "40 citations documenting career across ventures", link: "https://grokipedia.com/wiki/Leo_Raderman" },
-          ].map((item, i) => (
-            <div key={i} style={{
+      <FadeIn delay={0.3}>
+        <div style={{ maxWidth: "480px" }}>
+          <a href="https://grokipedia.com/page/rodger_raderman" target="_blank" rel="noopener noreferrer" style={{
+            display: "inline-flex",
+            alignItems: "center",
+            gap: "8px",
+            fontSize: "clamp(13px, 1.4vw, 15px)",
+            color: ACCENT,
+            textDecoration: "none",
+            fontWeight: 600,
+            fontFamily: "'DM Sans', sans-serif",
+            borderBottom: `1px solid ${ACCENT}`,
+            paddingBottom: "2px",
+          }}>
+            Full career documentation {"\u2014"} 40+ citations on Grokipedia {"\u2192"}
+          </a>
+        </div>
+      </FadeIn>
+    </section>
+  );
+}
+
+/* ─── HONORS & RECOGNITION ──────────────────────────────── */
+function HonorsSection() {
+  const honors = [
+    { label: "Hollywood Reporter", detail: "\u201C35 Under 35\u201D" },
+    { label: "GQ", detail: "\u201CMan of the Month\u201D" },
+    { label: "Red Herring", detail: "Cover \u2014 photographed by Helmut Newton" },
+    { label: "City of Los Angeles", detail: "Mayor Riordan declared \u201CIFILM Day\u201D" },
+  ];
+  return (
+    <section style={{
+      padding: "clamp(40px, 6vw, 80px) clamp(24px, 6vw, 80px)",
+      background: LIGHT_GRAY,
+    }}>
+      <FadeIn>
+        <div style={{
+          fontSize: "clamp(10px, 1.2vw, 12px)",
+          letterSpacing: "0.2em",
+          textTransform: "uppercase",
+          color: ACCENT,
+          fontWeight: 600,
+          marginBottom: "12px",
+          fontFamily: "'DM Sans', sans-serif",
+        }}>Honors & Recognition</div>
+      </FadeIn>
+      <div style={{ maxWidth: "560px" }}>
+        {honors.map((item, i) => (
+          <FadeIn key={i} delay={i * 0.06}>
+            <div style={{
               display: "flex",
               justifyContent: "space-between",
               alignItems: "baseline",
@@ -659,47 +818,37 @@ function MediaSection() {
                 fontWeight: 600,
                 color: DARK,
                 fontFamily: "'DM Sans', sans-serif",
-              }}>
-                {item.link ? (
-                  <a href={item.link} target="_blank" rel="noopener noreferrer" style={{
-                    color: DARK,
-                    textDecoration: "none",
-                    borderBottom: `1px solid ${ACCENT}`,
-                    paddingBottom: "1px",
-                    transition: "color 0.2s ease",
-                  }}>{item.label}</a>
-                ) : item.label}
-              </span>
+              }}>{item.label}</span>
               <span style={{
                 fontSize: "clamp(13px, 1.4vw, 14px)",
                 color: GRAY,
                 fontFamily: "'DM Sans', sans-serif",
               }}>{item.detail}</span>
             </div>
-          ))}
-        </div>
-      </FadeIn>
+          </FadeIn>
+        ))}
+      </div>
     </section>
   );
 }
 
-/* ─── WHY SECTION ───────────────────────────────────────── */
+/* ─── THE DIFFERENCE ────────────────────────────────────── */
 function WhySection() {
   const reasons = [
     {
       number: "01",
       title: "Cross-Industry Range",
-      text: "Internet video, immersive technology, toys, mobile communications, television, cannabis, advertising, non-profit healthcare. Working from first principles that transfer across domains \u2014 not pattern-matching to one industry\u2019s playbook.",
+      text: "Internet video, immersive technology, toys, mobile communications, cannabis, advertising, non-profit healthcare. Working from first principles that transfer across domains \u2014 not pattern-matching to one industry\u2019s playbook.",
     },
     {
       number: "02",
-      title: "Full Stack, Formation to Exit",
+      title: "Formation to Exit",
       text: "Formation, capital structure, fundraising, product development, go-to-market, PR, retail distribution at national scale. The full lifecycle completed multiple times \u2014 not expertise in one phase.",
     },
     {
       number: "03",
       title: "Category Creation",
-      text: "The rarest capability. Building categories that don\u2019t exist yet requires educating consumers before selling to them, creating mental models where none exist, and building infrastructure without benchmarks. Executed six times over twenty-five years.",
+      text: "The rarest capability. Building categories that don\u2019t exist yet requires educating consumers before selling to them, creating mental models where none exist, and building infrastructure without benchmarks. Executed five times over twenty-five years.",
     },
   ];
   return (
@@ -716,7 +865,7 @@ function WhySection() {
           fontWeight: 600,
           marginBottom: "12px",
           fontFamily: "'DM Sans', sans-serif",
-        }}>Why Pretty Well Fit</div>
+        }}>The Difference</div>
         <h2 style={{
           fontSize: "clamp(24px, 4vw, 40px)",
           fontWeight: 300,
@@ -725,7 +874,7 @@ function WhySection() {
           fontFamily: "'Instrument Serif', Georgia, serif",
           lineHeight: 1.2,
           maxWidth: "500px",
-        }}>Common in pieces. Rare in combination.</h2>
+        }}>Rare in pieces. Singular in combination.</h2>
       </FadeIn>
       <div style={{
         display: "grid",
@@ -849,11 +998,11 @@ export default function App() {
         <div style={{ maxWidth: "1100px", margin: "0 auto" }}>
           <Hero />
           <NumbersBar />
-          <PatternTimeline />
-          <CompaniesSection />
+          <PatternSection />
           <CapitalSection />
           <CapabilitiesSection />
-          <MediaSection />
+          <PressSection />
+          <HonorsSection />
           <WhySection />
           <ContactSection />
         </div>
