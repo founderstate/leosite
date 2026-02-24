@@ -272,6 +272,7 @@ function PatternSection() {
       industry: "Internet video / digital media",
       outcome: "Viacom acquired IFILM.com for $49M. Total IFILM enterprise asset sales exceeded $100M. DreamWorks\u2019 PopCom (Katzenberg, Geffen, Spielberg) and Imagine Entertainment (Grazer, Howard) folded their online video efforts into IFILM. Six years before YouTube existed",
       video: "https://vimeo.com/79609746",
+      press: { label: "The New York Times", url: "https://www.nytimes.com/1999/12/20/movies/technology-media-film-s-digital-potential-has-hollywood-on-edge.html" },
     },
     {
       year: "2000\u20132017",
@@ -281,6 +282,7 @@ function PatternSection() {
       industry: "Immersive video / experiential technology",
       outcome: "Company later acquired by Madison Square Garden Company. Core technology now powers The Sphere, Las Vegas",
       video: "https://vimeo.com/260863020",
+      press: { label: "Variety", url: "https://variety.com/2002/digital/markets-festivals/you-are-surrounded-by-obscura-1117868217/" },
     },
     {
       year: "2006\u20132008",
@@ -290,6 +292,7 @@ function PatternSection() {
       industry: "Cell phone photo and video platform",
       outcome: "First to enable user-generated video clips for NBC News. Pre-FaceTime, pre-Instagram",
       video: "https://youtu.be/wSWtwIAzuyA",
+      press: { label: "TechCrunch", url: "https://techcrunch.com/2006/10/25/veeker-an-embedded-player-for-mobile-video/" },
     },
     {
       year: "2008\u20132013",
@@ -299,6 +302,7 @@ function PatternSection() {
       industry: "Apps/video game and physical toys integration",
       outcome: "5,000+ retail locations including Apple, Walmart, Target, Toys-R-Us, Barnes & Noble. VentureBeat Best Mobile App 2012. Parenting Magazine Best Toy 2012",
       video: "https://vimeo.com/47917689",
+      press: { label: "GamesBeat", url: "https://gamesbeat.com/nukotoys-aims-to-be-silicon-valleys-toy-company/" },
       extraVideos: [
         { url: "https://vimeo.com/48104305", label: "Demo" },
         { url: "https://vimeo.com/42738280", label: "Gameplay" },
@@ -312,6 +316,7 @@ function PatternSection() {
       industry: "Non-profit / global healthcare",
       outcome: "100,000+ children treated worldwide",
       video: "https://youtu.be/cnZV21navZc",
+      press: { label: "PBS NewsHour", url: "https://www.pbs.org/newshour/world/correcting-clubfoot" },
     },
   ];
 
@@ -423,6 +428,18 @@ function PatternSection() {
                         letterSpacing: "0.05em",
                       }}>{ev.label} {"\u2192"}</a>
                     ))}
+                    {item.press && (
+                      <a href={item.press.url} target="_blank" rel="noopener noreferrer" style={{
+                        fontSize: "clamp(11px, 1.2vw, 13px)",
+                        color: GRAY,
+                        textDecoration: "none",
+                        fontWeight: 600,
+                        fontFamily: "'DM Sans', sans-serif",
+                        letterSpacing: "0.05em",
+                        borderLeft: `1px solid ${BORDER}`,
+                        paddingLeft: "12px",
+                      }}>{item.press.label} {"\u2192"}</a>
+                    )}
                   </div>
                 )}
               </div>
@@ -725,7 +742,7 @@ function PressSection() {
     { name: "Wired", url: "https://www.wired.com/story/obscura-digital-protests-projection-mapping-the-vatican/" },
     { name: "CNET", url: "https://www.cnet.com/culture/nukotoys-aims-for-next-generation-toy-empire/" },
     { name: "LA Times", url: "https://www.latimes.com/archives/la-xpm-2000-aug-31-fi-13123-story.html" },
-    { name: "PBS", url: null },
+    { name: "PBS", url: "https://www.pbs.org/newshour/world/correcting-clubfoot" },
     { name: "Fox News", url: null },
     { name: "Ad Age", url: "https://adage.com/article/news/coby-o-brien-darwin-digital/65658/" },
     { name: "GamesBeat", url: "https://gamesbeat.com/nukotoys-aims-to-be-silicon-valleys-toy-company/" },
