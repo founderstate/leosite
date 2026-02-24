@@ -343,7 +343,7 @@ function PatternSection() {
           fontFamily: "'Instrument Serif', Georgia, serif",
           maxWidth: "640px",
           lineHeight: 1.2,
-        }}>Five companies that entered their categories before the categories existed.</h2>
+        }}>Questioning what’s possible before it became probable.</h2>
       </FadeIn>
       <div style={{ maxWidth: "680px" }}>
         {items.map((item, i) => (
