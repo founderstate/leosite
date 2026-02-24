@@ -277,10 +277,10 @@ function PatternSection() {
     {
       year: "2000\u20132017",
       question: "“What’s architectural projection mapping?”",
-      company: "Obscura Digital",
+      company: "Obscura",
       role: "Co-Founder, CEO",
       industry: "Immersive video / experiential technology",
-      outcome: "Pioneered immersive architectural projection mapping — projecting onto the Empire State Building, the Vatican, and Fortune 500 stages worldwide. Company later acquired by Madison Square Garden Company. Core technology inspired and now powers The Sphere, Las Vegas.",
+      outcome: "Pioneered immersive architectural projection mapping — projecting onto the Empire State Building, the Vatican, the Sydney Opera House — alighting imagination on landmarks worldwide. Company later acquired by Madison Square Garden Company. Core technology inspired and now powers The Sphere, Las Vegas.",
       video: "https://vimeo.com/260863020",
       press: { label: "Variety", url: "https://variety.com/2002/digital/markets-festivals/you-are-surrounded-by-obscura-1117868217/" },
     },
@@ -684,7 +684,7 @@ function CapabilitiesSection() {
         {/* ── MARKETING, SALES & PARTNERSHIPS ── */}
         <Accordion title="Marketing, Sales & Partnerships">
           <PhaseLabel>Brand & Story</PhaseLabel>
-          <CapItem cap="Brand Creation & Naming" detail="Brand identity development from naming through visual system and voice. Obscura Digital (from da Vinci), Nukotoys, IFILM, Pretty Well Fit." />
+          <CapItem cap="Brand Creation & Naming" detail="Brand identity development from naming through visual system and voice. Obscura (from da Vinci), Nukotoys, IFILM, Pretty Well Fit." />
           <CapItem cap="PR & Earned Media" detail="Press strategy, media list development, journalist relationships, and earned media campaigns. Coverage in NYT, WSJ, Variety, Hollywood Reporter, Bloomberg, TechCrunch, Wired, CNET, LA Times, and many more." />
           <CapItem cap="Creative Direction" detail="High-level creative oversight for brand campaigns, product launches, and visual identity. IFILM (Helmut Newton shoot), Obscura (Fortune 500 installations)." />
           <CapItem cap="Content Marketing & SEO" detail="Organic acquisition strategy, content development, and conversion optimization." />
