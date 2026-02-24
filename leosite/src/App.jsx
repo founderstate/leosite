@@ -149,25 +149,47 @@ function FloatingNav() {
       <div style={{
         maxWidth: "1100px",
         margin: "0 auto",
-        padding: "14px clamp(24px, 6vw, 80px)",
+        padding: "10px clamp(24px, 6vw, 80px)",
         display: "flex",
         alignItems: "center",
-        justifyContent: "center",
-        gap: "clamp(16px, 2.5vw, 32px)",
-        flexWrap: "wrap",
+        justifyContent: "space-between",
+        gap: "clamp(12px, 2vw, 24px)",
       }}>
-        {links.map((link, i) => (
-          <a key={i} href={link.href} style={{
-            fontSize: "clamp(9px, 1.1vw, 11px)",
-            letterSpacing: "0.15em",
-            textTransform: "uppercase",
-            color: ACCENT,
-            textDecoration: "none",
-            fontWeight: 600,
-            fontFamily: "'DM Sans', sans-serif",
-            whiteSpace: "nowrap",
-          }}>{link.label}</a>
-        ))}
+        <a href="#" onClick={(e) => { e.preventDefault(); window.scrollTo({ top: 0, behavior: "smooth" }); }} style={{
+          display: "block",
+          flexShrink: 0,
+        }}>
+          <img
+            src="/LR3.png"
+            alt="Leo Raderman"
+            style={{
+              width: "32px",
+              height: "32px",
+              borderRadius: "4px",
+              objectFit: "cover",
+              display: "block",
+            }}
+          />
+        </a>
+        <div style={{
+          display: "flex",
+          alignItems: "center",
+          gap: "clamp(16px, 2.5vw, 32px)",
+          flexWrap: "wrap",
+        }}>
+          {links.map((link, i) => (
+            <a key={i} href={link.href} style={{
+              fontSize: "clamp(9px, 1.1vw, 11px)",
+              letterSpacing: "0.15em",
+              textTransform: "uppercase",
+              color: ACCENT,
+              textDecoration: "none",
+              fontWeight: 600,
+              fontFamily: "'DM Sans', sans-serif",
+              whiteSpace: "nowrap",
+            }}>{link.label}</a>
+          ))}
+        </div>
       </div>
     </nav>
   );
