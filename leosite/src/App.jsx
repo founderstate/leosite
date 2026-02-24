@@ -469,7 +469,7 @@ function PatternSection() {
             {
               company: "Saatchi & Saatchi Darwin Digital",
               role: "Managing Director & Creative Director",
-              question: "“How does a leading global advertising agency move into the digital world?”",
+              question: "“How does a leading global advertising agency go digital?”",
               detail: "Employee #3",
               years: "1997\u20131999",
             },
