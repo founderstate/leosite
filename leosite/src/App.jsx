@@ -123,7 +123,7 @@ function CapItem({ cap, detail }) {
   );
 }
 
-/* ─── HERO ──────────────────────────────────────────────── */
+/* ─── HERO ────────────────────────────────────────────────────── */
 function Hero() {
   return (
     <section style={{
@@ -177,7 +177,7 @@ function Hero() {
           fontFamily: "'Instrument Serif', Georgia, serif",
           maxWidth: "600px",
           fontStyle: "italic",
-        }}>Five companies that defined their categories {"—"} before the categories existed.</h2>
+        }}>Five companies that defined their categories — before the categories existed.</h2>
       </FadeIn>
       <FadeIn delay={0.35}>
         <p style={{
@@ -207,7 +207,7 @@ function Hero() {
             textDecoration: "none",
             fontWeight: 600,
             fontFamily: "'DM Sans', sans-serif",
-          }}>See the pattern {"\u2193"}</a>
+          }}>See the pattern ↓</a>
         </div>
       </FadeIn>
     </section>
@@ -988,43 +988,68 @@ function ContactSection() {
       borderTop: `1px solid ${BORDER}`,
       background: WHITE,
     }}>
-      <FadeIn>
-        <h2 style={{
-          fontSize: "clamp(24px, 4vw, 40px)",
-          fontWeight: 300,
-          color: DARK,
-          margin: "0 0 16px 0",
-          fontFamily: "'Instrument Serif', Georgia, serif",
-          lineHeight: 1.2,
-        }}>Let{"’"}s talk about what you{"’"}re building.</h2>
-        <p style={{
-          fontSize: "clamp(14px, 1.6vw, 16px)",
-          color: GRAY,
-          margin: "0 0 clamp(24px, 4vw, 36px) 0",
-          fontFamily: "'DM Sans', sans-serif",
-          lineHeight: 1.6,
-          maxWidth: "480px",
-        }}>
-          Available for strategic advisory engagements, fractional leadership,
-          and project-based consulting.
-        </p>
-      </FadeIn>
-      <FadeIn delay={0.1}>
-        <a href="mailto:leo@prettywellfit.com" style={{
-          display: "inline-flex",
-          alignItems: "center",
-          padding: "14px 32px",
-          background: ACCENT,
-          color: WHITE,
-          borderRadius: "4px",
-          fontSize: "clamp(13px, 1.4vw, 15px)",
-          fontFamily: "'DM Sans', sans-serif",
-          fontWeight: 600,
-          textDecoration: "none",
-          letterSpacing: "0.02em",
-          transition: "opacity 0.2s ease",
-        }}>leo@prettywellfit.com</a>
-      </FadeIn>
+      <div style={{
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "space-between",
+        gap: "clamp(32px, 5vw, 64px)",
+        flexWrap: "wrap",
+      }}>
+        {/* Left column - text */}
+        <div style={{ flex: "1 1 360px", minWidth: "260px" }}>
+          <FadeIn>
+            <h2 style={{
+              fontSize: "clamp(24px, 4vw, 40px)",
+              fontWeight: 300,
+              color: DARK,
+              margin: "0 0 16px 0",
+              fontFamily: "'Instrument Serif', Georgia, serif",
+              lineHeight: 1.2,
+            }}>Let{"\u2019"}s talk about what you{"\u2019"}re building.</h2>
+            <p style={{
+              fontSize: "clamp(14px, 1.6vw, 16px)",
+              color: GRAY,
+              margin: "0 0 clamp(24px, 4vw, 36px) 0",
+              fontFamily: "'DM Sans', sans-serif",
+              lineHeight: 1.6,
+              maxWidth: "480px",
+            }}>
+              Available for strategic advisory engagements, fractional leadership,
+              and project-based consulting.
+            </p>
+          </FadeIn>
+          <FadeIn delay={0.1}>
+            <a href="mailto:leo@prettywellfit.com" style={{
+              display: "inline-flex",
+              alignItems: "center",
+              padding: "14px 32px",
+              background: ACCENT,
+              color: WHITE,
+              borderRadius: "4px",
+              fontSize: "clamp(13px, 1.4vw, 15px)",
+              fontFamily: "'DM Sans', sans-serif",
+              fontWeight: 600,
+              textDecoration: "none",
+              letterSpacing: "0.02em",
+              transition: "opacity 0.2s ease",
+            }}>leo@prettywellfit.com</a>
+          </FadeIn>
+        </div>
+        {/* Right column - headshot */}
+        <FadeIn delay={0.2} style={{ flex: "0 0 auto" }}>
+          <img
+            src="/LR3.png"
+            alt="Leo Raderman"
+            style={{
+              width: "clamp(140px, 18vw, 200px)",
+              height: "clamp(140px, 18vw, 200px)",
+              borderRadius: "4px",
+              objectFit: "cover",
+              display: "block",
+            }}
+          />
+        </FadeIn>
+      </div>
       <FadeIn delay={0.15}>
         <div style={{
           marginTop: "clamp(48px, 8vw, 80px)",
@@ -1040,7 +1065,7 @@ function ContactSection() {
             fontSize: "12px",
             color: GRAY,
             fontFamily: "'DM Sans', sans-serif",
-          }}>Pretty Well Fit {"—"} Leo Raderman</span>
+          }}>Pretty Well Fit \u2014 Leo Raderman</span>
           <span style={{
             fontSize: "12px",
             color: GRAY,
