@@ -470,7 +470,7 @@ function PatternSection() {
               company: "Saatchi & Saatchi Darwin Digital",
               role: "Managing Director & Creative Director",
               question: "“How does a leading global advertising agency go digital?”",
-              detail: "Employee #3",
+              detail: "Employee #3 in the New York office. Established digital teams in New Zealand and San Francisco.",
               years: "1997\u20131999",
             },
             {
