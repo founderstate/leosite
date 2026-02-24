@@ -177,7 +177,7 @@ function Hero() {
           fontFamily: "'Instrument Serif', Georgia, serif",
           maxWidth: "600px",
           fontStyle: "italic",
-        }}>Five companies that defined their categories {"\u2014"} before the categories existed.</h2>
+        }}>Five companies that defined their categories {"—"} before the categories existed.</h2>
       </FadeIn>
       <FadeIn delay={0.35}>
         <p style={{
@@ -266,17 +266,17 @@ function PatternSection() {
   const items = [
     {
       year: "1998\u20132005",
-      question: "\u201CWhat\u2019s internet video?\u201D",
+      question: "“What’s internet video?”",
       company: "IFILM",
       role: "Founder, CEO",
       industry: "Internet video / digital media",
-      outcome: "Viacom acquired IFILM.com for $49M. Total IFILM enterprise asset sales exceeded $100M. DreamWorks\u2019 PopCom (Katzenberg, Geffen, Spielberg) and Imagine Entertainment (Grazer, Howard) folded their online video efforts into IFILM. Six years before YouTube existed",
+      outcome: "Viacom acquired IFILM.com for $49M. Total IFILM enterprise asset sales exceeded $100M. DreamWorks’ PopCom (Katzenberg, Geffen, Spielberg) and Imagine Entertainment (Grazer, Howard) folded their online video efforts into IFILM. Six years before YouTube existed",
       video: "https://vimeo.com/79609746",
       press: { label: "The New York Times", url: "https://www.nytimes.com/1999/12/20/movies/technology-media-film-s-digital-potential-has-hollywood-on-edge.html" },
     },
     {
       year: "2000\u20132017",
-      question: "\u201CWhat\u2019s architectural projection mapping?\u201D",
+      question: "“What’s architectural projection mapping?”",
       company: "Obscura Digital",
       role: "Co-Founder, CEO",
       industry: "Immersive video / experiential technology",
@@ -286,7 +286,7 @@ function PatternSection() {
     },
     {
       year: "2006\u20132008",
-      question: "\u201CWhat\u2019s mobile video communication?\u201D",
+      question: "“What’s mobile video communication?”",
       company: "Veeker",
       role: "Co-Founder, Chief Market & Product Officer",
       industry: "Cell phone photo and video platform",
@@ -296,7 +296,7 @@ function PatternSection() {
     },
     {
       year: "2008\u20132013",
-      question: "\u201CWhat\u2019s a physical-digital play pattern?\u201D",
+      question: "“What’s a physical-digital play pattern?”",
       company: "Nukotoys",
       role: "Co-Founder, Co-CEO",
       industry: "Apps/video game and physical toys integration",
@@ -310,7 +310,7 @@ function PatternSection() {
     },
     {
       year: "2010\u2013Present",
-      question: "\u201CHow can kids in developing countries be cured of clubfoot?\u201D",
+      question: "“How can kids in developing countries be cured of clubfoot?”",
       company: "MiracleFeet",
       role: "Co-Founder, Board Member",
       industry: "Non-profit / global healthcare",
@@ -417,7 +417,7 @@ function PatternSection() {
                       fontWeight: 600,
                       fontFamily: "'DM Sans', sans-serif",
                       letterSpacing: "0.05em",
-                    }}>Watch {"\u2192"}</a>
+                    }}>Watch {"→"}</a>
                     {item.extraVideos && item.extraVideos.map((ev, j) => (
                       <a key={j} href={ev.url} target="_blank" rel="noopener noreferrer" style={{
                         fontSize: "clamp(11px, 1.2vw, 13px)",
@@ -426,7 +426,7 @@ function PatternSection() {
                         fontWeight: 600,
                         fontFamily: "'DM Sans', sans-serif",
                         letterSpacing: "0.05em",
-                      }}>{ev.label} {"\u2192"}</a>
+                      }}>{ev.label} {"→"}</a>
                     ))}
                     {item.press && (
                       <a href={item.press.url} target="_blank" rel="noopener noreferrer" style={{
@@ -438,7 +438,7 @@ function PatternSection() {
                         letterSpacing: "0.05em",
                         borderLeft: `1px solid ${BORDER}`,
                         paddingLeft: "12px",
-                      }}>{item.press.label} {"\u2192"}</a>
+                      }}>{item.press.label} {"→"}</a>
                     )}
                   </div>
                 )}
@@ -469,14 +469,14 @@ function PatternSection() {
             {
               company: "Saatchi & Saatchi Darwin Digital",
               role: "Managing Director & Creative Director",
-              question: "\u201CHow does a leading advertising company move into the digital world?\u201D",
+              question: "“How does a leading advertising company move into the digital world?”",
               detail: "Employee #3",
               years: "1997\u20131999",
             },
             {
               company: "Pretty Well Fit",
               role: "Managing Partner",
-              question: "\u201CHow do I help founders make their vision a reality?\u201D",
+              question: "“How do I help founders make their vision a reality?”",
               detail: "Strategic advisory for founders building what comes next",
               years: "2023\u2013Present",
             },
@@ -544,7 +544,7 @@ function PatternSection() {
 function CapitalSection() {
   const investors = [
     "Sony Corporation", "Yahoo!", "Independent Film Channel",
-    "Roy Disney\u2019s Steamboat Ventures",
+    "Roy Disney’s Steamboat Ventures",
     "Eastman Kodak", "Rainbow Media (AMC Networks)", "Liberty Digital",
     "Axiom Venture Partners", "Meritage Funds", "OddLot Entertainment",
   ];
@@ -579,12 +579,12 @@ function CapitalSection() {
           lineHeight: 1.6,
           maxWidth: "580px",
         }}>
-          The full capital formation lifecycle {"\u2014"} friends and family through VC,
+          The full capital formation lifecycle {"—"} friends and family through VC,
           strategic/corporate investors, term sheet negotiation, and exit.
           Presented to the full partnership at Kleiner Perkins. Pitched Sequoia,
           Benchmark, Andreessen Horowitz, Accel, NEA, DFJ, Bessemer, and nearly
-          every major fund on Sand Hill Road. Closed John Malone{"\u2019"}s Liberty Digital,
-          Roy Disney{"\u2019"}s Steamboat Ventures, Axiom Venture Partners, and Meritage Funds.
+          every major fund on Sand Hill Road. Closed John Malone{"’"}s Liberty Digital,
+          Roy Disney{"’"}s Steamboat Ventures, Axiom Venture Partners, and Meritage Funds.
           Strategic investments from Sony, Yahoo!, Eastman Kodak, Independent Film
           Channel, Rainbow Media.
         </p>
@@ -647,15 +647,15 @@ function CapabilitiesSection() {
           <PhaseLabel>Structure & Strategy</PhaseLabel>
           <CapItem cap="Capital Strategy & Staging" detail="Right-sizing raises, staging capital deployment, and matching capital strategy to business phase. Bootstrapped through $65M+ in raised capital across all ventures." />
           <CapItem cap="Company / Round Structuring" detail="Entity selection, SAFE/convertible note guidance, and round documentation. Demonstrated at IFILM (initial capital structure) and Nukotoys (OddLot JV structure)." />
-          <CapItem cap="Investor Deck Creation" detail="Institutional-grade pitch materials for every stage. Pitched Sony, Yahoo!, Paul Allen\u2019s fund, Toy Fair audiences, and VC full partnerships." />
+          <CapItem cap="Investor Deck Creation" detail="Institutional-grade pitch materials for every stage. Pitched Sony, Yahoo!, Paul Allen’s fund, Toy Fair audiences, and VC full partnerships." />
 
           <PhaseLabel>Build the Room</PhaseLabel>
           <CapItem cap="Angel Investor Identification & Pitch" detail="High-net-worth investor targeting and warm introduction strategy. IFILM angel round included Kevin Wendle (co-founder of FOX cable network and C|Net) via Morgan Stanley Private Wealth Management. Additional angels included Steven Spielberg, producing partner Kathleen Kennedy, and heads of major Hollywood talent agencies." />
-          <CapItem cap="VC Targeting & Sequencing" detail="Full VC fundraising process \u2014 data room, meeting sequencing, partner meetings through full partnership presentations. Presented to the full partnership at Kleiner Perkins. Pitched Sequoia, Benchmark, Andreessen Horowitz, Accel, NEA, DFJ, Bessemer, and nearly every major fund on Sand Hill Road. IFILM Series A led by Axiom Venture Partners; Veeker funded by Meritage Funds." />
-          <CapItem cap="Strategic & Corporate Investor Acquisition" detail="Identifying, pitching, and closing strategic investors who bring capital plus distribution, credibility, or operational value. Closed Sony, Yahoo!, IFC, Roy Disney\u2019s Steamboat Ventures, Eastman Kodak, and Rainbow Media (AMC Networks)." />
+          <CapItem cap="VC Targeting & Sequencing" detail="Full VC fundraising process — data room, meeting sequencing, partner meetings through full partnership presentations. Presented to the full partnership at Kleiner Perkins. Pitched Sequoia, Benchmark, Andreessen Horowitz, Accel, NEA, DFJ, Bessemer, and nearly every major fund on Sand Hill Road. IFILM Series A led by Axiom Venture Partners; Veeker funded by Meritage Funds." />
+          <CapItem cap="Strategic & Corporate Investor Acquisition" detail="Identifying, pitching, and closing strategic investors who bring capital plus distribution, credibility, or operational value. Closed Sony, Yahoo!, IFC, Roy Disney’s Steamboat Ventures, Eastman Kodak, and Rainbow Media (AMC Networks)." />
 
           <PhaseLabel>Negotiate & Close</PhaseLabel>
-          <CapItem cap="Term Sheet Negotiation" detail="Protecting founder interests across valuation, dilution, control, and liquidation preference terms. Five companies, multiple rounds \u2014 seed through growth stages." />
+          <CapItem cap="Term Sheet Negotiation" detail="Protecting founder interests across valuation, dilution, control, and liquidation preference terms. Five companies, multiple rounds — seed through growth stages." />
           <CapItem cap="Valuation Negotiation" detail="Stage-appropriate valuation benchmarking, cap table modeling, and negotiation strategy across seed, Series A, and growth rounds. Structured and negotiated valuations at IFILM, Nukotoys, and Veeker." />
 
           <PhaseLabel>Post-Close</PhaseLabel>
@@ -667,16 +667,16 @@ function CapabilitiesSection() {
         <Accordion title="Product Development & Go-to-Market">
           <PhaseLabel>Conceive</PhaseLabel>
           <CapItem cap="New Category Creation" detail="Market education strategy, consumer mental model creation, and category positioning when no benchmarks exist. IFILM (online video before YouTube), Nukotoys (physical-digital play), Obscura (projection mapping)." />
-          <CapItem cap="Category Education / Market Creation" detail="Content strategy, media positioning, and messaging for products consumers don\u2019t have a mental model for. IFILM (explaining \u201Cinternet video\u201D in 1998), Nukotoys (explaining apps/video game and physical toys integration)." />
+          <CapItem cap="Category Education / Market Creation" detail="Content strategy, media positioning, and messaging for products consumers don’t have a mental model for. IFILM (explaining “internet video” in 1998), Nukotoys (explaining apps/video game and physical toys integration)." />
           <CapItem cap="Hardware / Software Integration" detail="Product strategy for companies combining physical and digital components. Nukotoys (physical cards + camera recognition + app), Obscura (projection hardware + content software)." />
-          <CapItem cap="Razor / Razorblade Model Design" detail="Recurring revenue model design \u2014 device + consumable, platform + content, or hardware + service. Nukotoys (free app + paid physical cards)." />
+          <CapItem cap="Razor / Razorblade Model Design" detail="Recurring revenue model design — device + consumable, platform + content, or hardware + service. Nukotoys (free app + paid physical cards)." />
 
           <PhaseLabel>Build</PhaseLabel>
           <CapItem cap="Manufacturing Partner Management" detail="Vendor selection, relationship management, quality control, and cost negotiation. Nukotoys (toy manufacturing, Hong Kong Toy Fair), Obscura (display systems)." />
           <CapItem cap="SKU Strategy & Product Line Architecture" detail="Product line planning, pricing tiers, bundle strategy, and margin optimization. Nukotoys (multiple card series, different price points across five national retailers)." />
 
           <PhaseLabel>Launch</PhaseLabel>
-          <CapItem cap="Pre-Launch Brand Building" detail="Building brand awareness and credibility before product is available \u2014 creating demand before supply. IFILM (brand before platform launched), Nukotoys (Toy Fair before retail)." />
+          <CapItem cap="Pre-Launch Brand Building" detail="Building brand awareness and credibility before product is available — creating demand before supply. IFILM (brand before platform launched), Nukotoys (Toy Fair before retail)." />
           <CapItem cap="Trade Show Strategy & Execution" detail="Trade show planning, booth strategy, meeting scheduling, and post-show follow-up conversion. Nukotoys (Hong Kong Toy Fair, US Toy Fair)." />
           <CapItem cap="D2C E-Commerce" detail="Direct-to-consumer channel strategy, platform selection, and launch execution. Pretty Well Fit (cannabis wellness D2C)." />
         </Accordion>
@@ -687,7 +687,7 @@ function CapabilitiesSection() {
           <CapItem cap="Brand Creation & Naming" detail="Brand identity development from naming through visual system and voice. Obscura Digital (from da Vinci), Nukotoys, IFILM, Pretty Well Fit." />
           <CapItem cap="PR & Earned Media" detail="Press strategy, media list development, journalist relationships, and earned media campaigns. Coverage in NYT, WSJ, Variety, Hollywood Reporter, Bloomberg, TechCrunch, Wired, CNET, LA Times, and many more." />
           <CapItem cap="Creative Direction" detail="High-level creative oversight for brand campaigns, product launches, and visual identity. IFILM (Helmut Newton shoot), Obscura (Fortune 500 installations)." />
-          <CapItem cap="Content Marketing & SEO" detail="Organic acquisition strategy, content development, and conversion optimization. Pretty Well Fit and FounderState (landing pages, conversion optimization)." />
+          <CapItem cap="Content Marketing & SEO" detail="Organic acquisition strategy, content development, and conversion optimization." />
 
           <PhaseLabel>Sell</PhaseLabel>
           <CapItem cap="Enterprise / B2B Sales" detail="B2B partnership development, enterprise sales process, and account management. Obscura (Fortune 500 clients), Nukotoys (national retail chains)." />
@@ -695,14 +695,14 @@ function CapabilitiesSection() {
           <CapItem cap="Channel Conflict Management" detail="Pricing and positioning strategies that protect partners while maintaining direct channels. Nukotoys (five national retail channels simultaneously)." />
 
           <PhaseLabel>Partner</PhaseLabel>
-          <CapItem cap="Strategic Partnership Structuring" detail="Partnership architecture \u2014 JVs, licensing, co-marketing, revenue share, and equity structures. Nukotoys/OddLot (JV), Nukotoys/PBS (education grant), IFILM/Sony/Yahoo!." />
+          <CapItem cap="Strategic Partnership Structuring" detail="Partnership architecture — JVs, licensing, co-marketing, revenue share, and equity structures. Nukotoys/OddLot (JV), Nukotoys/PBS (education grant), IFILM/Sony/Yahoo!." />
           <CapItem cap="Licensing & Revenue Share Models" detail="IP monetization, licensing term negotiation, and revenue share structuring. Nukotoys (licensing IP for physical-digital play)." />
         </Accordion>
 
         {/* ── LEGAL, OPERATIONS & COMPANY BUILDING ── */}
         <Accordion title="Legal, Operations & Company Building">
           <PhaseLabel>Form</PhaseLabel>
-          <CapItem cap="Company Formation & Entity Structuring" detail="Guidance on entity selection, formation, and restructuring as business evolves. Five companies \u2014 LLC, C-Corp, JV structures." />
+          <CapItem cap="Company Formation & Entity Structuring" detail="Guidance on entity selection, formation, and restructuring as business evolves. Five companies — LLC, C-Corp, JV structures." />
           <CapItem cap="Co-Founder Agreements & Equity Splits" detail="Founder relationship structuring, equity allocation, and role definition. IFILM (with Luke McDonough), Nukotoys (Co-CEO with Doug Penman), Obscura (with Travis Threlkel)." />
           <CapItem cap="Joint Venture Structuring" detail="JV architecture, governance, economics, and exit provisions. Nukotoys/OddLot Entertainment 50/50 JV." />
 
@@ -711,17 +711,17 @@ function CapabilitiesSection() {
 
           <PhaseLabel>Scale</PhaseLabel>
           <CapItem cap="Hiring & Team Building" detail="Organizational design, key hire identification, and team scaling strategy. IFILM (grew to 100+ employees), Nukotoys, Obscura, Saatchi & Saatchi." />
-          <CapItem cap="Budget Management & Resource Allocation" detail="Capital deployment optimization, burn rate management, and resource prioritization across all ventures \u2014 bootstrapped through $65M+ in raised capital." />
+          <CapItem cap="Budget Management & Resource Allocation" detail="Capital deployment optimization, burn rate management, and resource prioritization across all ventures — bootstrapped through $65M+ in raised capital." />
 
           <PhaseLabel>Navigate</PhaseLabel>
           <CapItem cap="Exit Negotiation & M&A" detail="Exit preparation, buyer identification, negotiation strategy, and deal execution. IFILM sale to Viacom ($100M+), Obscura sale to MSG." />
-          <CapItem cap="Pivot & Strategic Redirection" detail="Recognizing when to pivot, managing stakeholder communication, and executing strategic shifts. Veeker (pre-smartphone mobile video), Nukotoys (toy \u2192 education)." />
+          <CapItem cap="Pivot & Strategic Redirection" detail="Recognizing when to pivot, managing stakeholder communication, and executing strategic shifts. Veeker (pre-smartphone mobile video), Nukotoys (toy → education)." />
         </Accordion>
 
         {/* ── RETAIL DISTRIBUTION AT SCALE ── */}
         <Accordion title="Retail Distribution at Scale">
           <CapItem cap="Multi-Channel National Distribution" detail="Simultaneous retail distribution across five major national chains: Apple Stores, Walmart, Target, Toys-R-Us, and Barnes & Noble." />
-          <CapItem cap="Buyer Relationship Management" detail="Managing fundamentally different buyer relationships, pricing strategies, merchandising requirements, and channel conflict dynamics \u2014 simultaneously across all channels." />
+          <CapItem cap="Buyer Relationship Management" detail="Managing fundamentally different buyer relationships, pricing strategies, merchandising requirements, and channel conflict dynamics — simultaneously across all channels." />
           <CapItem cap="Pricing Strategy Across Channels" detail="Maintaining pricing integrity while managing different economics, margin expectations, and competitive dynamics at each retail partner." />
           <CapItem cap="Merchandising & In-Store Execution" detail="Channel-specific merchandising, planogram negotiation, and in-store positioning strategy across mass retail and specialty channels." />
         </Accordion>
@@ -841,7 +841,7 @@ function PressSection() {
             borderBottom: `1px solid ${ACCENT}`,
             paddingBottom: "2px",
           }}>
-            40+ citations on Grokipedia {"\u2192"}
+            40+ citations on Grokipedia {"→"}
           </a>
         </div>
       </FadeIn>
@@ -862,10 +862,10 @@ function PressSection() {
             fontFamily: "'DM Sans', sans-serif",
           }}>Honors & Recognition</div>
           {[
-            { label: "Hollywood Reporter", detail: "\u201C35 Under 35\u201D" },
-            { label: "GQ", detail: "\u201CMan of the Month\u201D" },
-            { label: "Red Herring", detail: "Cover \u2014 photographed by Helmut Newton" },
-            { label: "City of Los Angeles", detail: "Mayor Riordan declared \u201CIFILM Day\u201D" },
+            { label: "Hollywood Reporter", detail: "“35 Under 35”" },
+            { label: "GQ", detail: "“Man of the Month”" },
+            { label: "Red Herring", detail: "Cover — photographed by Helmut Newton" },
+            { label: "City of Los Angeles", detail: "Mayor Riordan declared “IFILM Day”" },
           ].map((item, i) => (
             <div key={i} style={{
               display: "flex",
@@ -901,17 +901,17 @@ function WhySection() {
     {
       number: "01",
       title: "Cross-Industry Range",
-      text: "Internet video, immersive technology, toys, mobile communications, cannabis, advertising, non-profit healthcare. Working from first principles that transfer across domains \u2014 not pattern-matching to one industry\u2019s playbook.",
+      text: "Internet video, immersive technology, toys, mobile communications, cannabis, advertising, non-profit healthcare. Working from first principles that transfer across domains — not pattern-matching to one industry’s playbook.",
     },
     {
       number: "02",
       title: "Formation to Exit",
-      text: "Formation, capital structure, fundraising, product development, go-to-market, PR, retail distribution at national scale. The full lifecycle completed multiple times \u2014 not expertise in one phase.",
+      text: "Formation, capital structure, fundraising, product development, go-to-market, PR, retail distribution at national scale. The full lifecycle completed multiple times — not expertise in one phase.",
     },
     {
       number: "03",
       title: "Category Creation",
-      text: "The rarest capability. Building categories that don\u2019t exist yet requires educating consumers before selling to them, creating mental models where none exist, and building infrastructure without benchmarks. Executed five times over twenty-five years.",
+      text: "The rarest capability. Building categories that don’t exist yet requires educating consumers before selling to them, creating mental models where none exist, and building infrastructure without benchmarks. Executed five times over twenty-five years.",
     },
   ];
   return (
@@ -996,7 +996,7 @@ function ContactSection() {
           margin: "0 0 16px 0",
           fontFamily: "'Instrument Serif', Georgia, serif",
           lineHeight: 1.2,
-        }}>Let{"\u2019"}s talk about what you{"\u2019"}re building.</h2>
+        }}>Let{"’"}s talk about what you{"’"}re building.</h2>
         <p style={{
           fontSize: "clamp(14px, 1.6vw, 16px)",
           color: GRAY,
@@ -1040,7 +1040,7 @@ function ContactSection() {
             fontSize: "12px",
             color: GRAY,
             fontFamily: "'DM Sans', sans-serif",
-          }}>Pretty Well Fit {"\u2014"} Leo Raderman</span>
+          }}>Pretty Well Fit {"—"} Leo Raderman</span>
           <span style={{
             fontSize: "12px",
             color: GRAY,
