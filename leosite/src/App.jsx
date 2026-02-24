@@ -301,11 +301,11 @@ function PatternSection() {
       role: "Co-Founder, Co-CEO",
       industry: "Apps/video game and physical toys integration",
       outcome: "Created collectible trading cards that activated in-game characters with a tap on the screen — bridging physical toys and digital play. Licensed with Animal Planet and Ology Books. 5,000+ retail locations including Apple, Walmart, Target, Toys-R-Us, Barnes & Noble. VentureBeat Best Mobile App 2012. Parenting Magazine Best Toy 2012.",
-      video: "https://vimeo.com/47917689",
+      video: "https://vimeo.com/42738280",
       press: { label: "GamesBeat", url: "https://gamesbeat.com/nukotoys-aims-to-be-silicon-valleys-toy-company/" },
       extraVideos: [
-        { url: "https://vimeo.com/48104305", label: "Demo" },
-        { url: "https://vimeo.com/42738280", label: "Gameplay" },
+        { url: "https://vimeo.com/36580567", label: "Learn" },
+        { url: "https://vimeo.com/47917689", label: "Gameplay" },
       ],
     },
     {
