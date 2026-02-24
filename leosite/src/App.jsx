@@ -289,7 +289,7 @@ function PatternSection() {
       role: "Co-Founder, Chief Market & Product Officer",
       industry: "Cell phone photo and video platform",
       outcome: "First to enable user-generated video clips for NBC News. Pre-FaceTime, pre-Instagram",
-      video: null,
+      video: "https://youtu.be/wSWtwIAzuyA",
     },
     {
       year: "2008",
