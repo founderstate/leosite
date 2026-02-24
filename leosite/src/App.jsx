@@ -702,10 +702,21 @@ function CapabilitiesSection() {
 /* ─── PRESS & MEDIA ─────────────────────────────────────── */
 function PressSection() {
   const press = [
-    "The New York Times", "The Wall Street Journal", "Variety",
-    "The Hollywood Reporter", "Bloomberg", "TechCrunch", "Wired",
-    "CNET", "LA Times", "PBS", "Fox News", "Ad Age", "GamesBeat",
-    "Communication Arts", "GQ",
+    { name: "The New York Times", url: "https://www.nytimes.com/1999/08/06/movies/at-the-movies-getting-cozy-on-the-internet.html" },
+    { name: "The Wall Street Journal", url: null },
+    { name: "Variety", url: "https://variety.com/2002/digital/markets-festivals/you-are-surrounded-by-obscura-1117868217/" },
+    { name: "The Hollywood Reporter", url: null },
+    { name: "Bloomberg", url: "https://www.bloomberg.com/news/articles/2013-05-09/bluescape-the-touchscreen-that-covers-a-wall" },
+    { name: "TechCrunch", url: "https://techcrunch.com/2006/10/25/veeker-an-embedded-player-for-mobile-video/" },
+    { name: "Wired", url: "https://www.wired.com/story/obscura-digital-protests-projection-mapping-the-vatican/" },
+    { name: "CNET", url: "https://www.cnet.com/culture/nukotoys-aims-for-next-generation-toy-empire/" },
+    { name: "LA Times", url: "https://www.latimes.com/archives/la-xpm-2000-aug-31-fi-13123-story.html" },
+    { name: "PBS", url: null },
+    { name: "Fox News", url: null },
+    { name: "Ad Age", url: "https://adage.com/article/news/coby-o-brien-darwin-digital/65658/" },
+    { name: "GamesBeat", url: "https://gamesbeat.com/nukotoys-aims-to-be-silicon-valleys-toy-company/" },
+    { name: "Communication Arts", url: "https://www.commarts.com/features/obscura-digital" },
+    { name: "GQ", url: null },
   ];
   return (
     <section style={{
@@ -741,16 +752,34 @@ function PressSection() {
       }}>
         {press.map((p, i) => (
           <FadeIn key={i} delay={i * 0.03}>
-            <span style={{
-              display: "inline-block",
-              padding: "9px 18px",
-              background: DARK,
-              color: WHITE,
-              borderRadius: "4px",
-              fontSize: "clamp(11px, 1.2vw, 13px)",
-              fontFamily: "'DM Sans', sans-serif",
-              fontWeight: 500,
-            }}>{p}</span>
+            {p.url ? (
+              <a href={p.url} target="_blank" rel="noopener noreferrer" style={{
+                display: "inline-block",
+                padding: "9px 18px",
+                background: DARK,
+                color: WHITE,
+                borderRadius: "4px",
+                fontSize: "clamp(11px, 1.2vw, 13px)",
+                fontFamily: "'DM Sans', sans-serif",
+                fontWeight: 500,
+                textDecoration: "none",
+                transition: "background 0.2s ease",
+              }}
+              onMouseEnter={e => e.currentTarget.style.background = ACCENT}
+              onMouseLeave={e => e.currentTarget.style.background = DARK}
+              >{p.name}</a>
+            ) : (
+              <span style={{
+                display: "inline-block",
+                padding: "9px 18px",
+                background: DARK,
+                color: WHITE,
+                borderRadius: "4px",
+                fontSize: "clamp(11px, 1.2vw, 13px)",
+                fontFamily: "'DM Sans', sans-serif",
+                fontWeight: 500,
+              }}>{p.name}</span>
+            )}
           </FadeIn>
         ))}
       </div>
