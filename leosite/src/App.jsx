@@ -612,7 +612,7 @@ function CapabilitiesSection() {
 
       <div style={{ maxWidth: "740px" }}>
         {/* ── FUNDRAISING & CAPITAL FORMATION ── */}
-        <Accordion title="Fundraising & Capital Formation" defaultOpen={true}>
+        <Accordion title="Fundraising & Capital Formation">
           <PhaseLabel>Structure & Strategy</PhaseLabel>
           <CapItem cap="Capital Strategy & Staging" detail="Right-sizing raises, staging capital deployment, and matching capital strategy to business phase. Bootstrapped through $65M+ in raised capital across all ventures." />
           <CapItem cap="Company / Round Structuring" detail="Entity selection, SAFE/convertible note guidance, and round documentation. Demonstrated at IFILM (initial capital structure) and Nukotoys (OddLot JV structure)." />
