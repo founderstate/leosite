@@ -893,23 +893,23 @@ function CapabilitiesSection() {
 function PressSection() {
   const press = [
     { name: "The New York Times", url: "https://www.nytimes.com/1999/12/20/movies/technology-media-film-s-digital-potential-has-hollywood-on-edge.html" },
+    { name: "Variety", url: "https://variety.com/2002/digital/markets-festivals/you-are-surrounded-by-obscura-1117868217/" },
+    { name: "TechCrunch", url: "https://techcrunch.com/2006/10/25/veeker-an-embedded-player-for-mobile-video/" },
+    { name: "GamesBeat", url: "https://gamesbeat.com/nukotoys-aims-to-be-silicon-valleys-toy-company/" },
+    { name: "PBS", url: "https://www.pbs.org/newshour/world/correcting-clubfoot" },
+    { name: "Bloomberg", url: "https://www.bloomberg.com/news/articles/2013-05-09/bluescape-the-touchscreen-that-covers-a-wall" },
     { name: "The Wall Street Journal", url: null },
     { name: "The Hollywood Reporter", url: null },
-    { name: "Variety", url: "https://variety.com/2002/digital/markets-festivals/you-are-surrounded-by-obscura-1117868217/" },
-    { name: "Bloomberg", url: "https://www.bloomberg.com/news/articles/2013-05-09/bluescape-the-touchscreen-that-covers-a-wall" },
     { name: "Wired", url: "https://www.wired.com/story/obscura-digital-protests-projection-mapping-the-vatican/" },
-    { name: "TechCrunch", url: "https://techcrunch.com/2006/10/25/veeker-an-embedded-player-for-mobile-video/" },
-    { name: "Communication Arts", url: "https://www.commarts.com/features/obscura-digital" },
-    { name: "LA Times", url: "https://www.latimes.com/archives/la-xpm-2000-aug-31-fi-13123-story.html" },
-    { name: "InformationWeek", url: "https://www.informationweek.com/it-leadership/brief-veeker-gets-mobile-video-uploaded-to-web" },
     { name: "CNET", url: "https://www.cnet.com/culture/nukotoys-aims-for-next-generation-toy-empire/" },
-    { name: "PBS", url: "https://www.pbs.org/newshour/world/correcting-clubfoot" },
-    { name: "Crain's New York", url: "https://www.crainsnewyork.com/article/19980420/SUB/804200739/saatchi-unit-is-latest-entry-in-survival-of-fittest-game-darwin-digital-must-try-to-catch-up-with-more-established-int" },
+    { name: "LA Times", url: "https://www.latimes.com/archives/la-xpm-2000-aug-31-fi-13123-story.html" },
+    { name: "GQ", url: null },
+    { name: "Communication Arts", url: "https://www.commarts.com/features/obscura-digital" },
+    { name: "InformationWeek", url: "https://www.informationweek.com/it-leadership/brief-veeker-gets-mobile-video-uploaded-to-web" },
     { name: "Fox News", url: null },
     { name: "Ad Age", url: "https://adage.com/article/news/coby-o-brien-darwin-digital/65658/" },
-    { name: "GamesBeat", url: "https://gamesbeat.com/nukotoys-aims-to-be-silicon-valleys-toy-company/" },
+    { name: "Crain's New York", url: "https://www.crainsnewyork.com/article/19980420/SUB/804200739/saatchi-unit-is-latest-entry-in-survival-of-fittest-game-darwin-digital-must-try-to-catch-up-with-more-established-int" },
     { name: "The ToyBook", url: "https://toybook.com/nukotoys-combines-real-world-toys-and-mobile-games/" },
-    { name: "GQ", url: null },
   ];
   return (
     <section id="coverage" style={{
@@ -941,7 +941,7 @@ function PressSection() {
         flexWrap: "wrap",
         gap: "10px",
         marginBottom: "clamp(24px, 4vw, 36px)",
-        maxWidth: "900px",
+        maxWidth: "840px",
       }}>
         {press.map((p, i) => (
           <FadeIn key={i} delay={i * 0.03}>
