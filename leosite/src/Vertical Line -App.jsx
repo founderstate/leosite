@@ -287,7 +287,6 @@ function Hero() {
           height: "clamp(24px, 3vw, 32px)",
           background: ACCENT,
           marginBottom: "clamp(16px, 3vw, 28px)",
-          animation: "pulse 3s ease-in-out infinite",
         }} />
       </FadeIn>
       <FadeIn delay={0.1}>
@@ -1240,7 +1239,7 @@ function ContactSection() {
 export default function App() {
   return (
     <>
-      <style>{`@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&family=Instrument+Serif:ital@0;1&display=swap'); *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; } html { scroll-behavior: smooth; scroll-padding-top: 56px; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; } body { background: ${WHITE}; color: ${DARK}; overflow-x: hidden; } button { border: none; outline: none; } a:hover { opacity: 0.85; } button:hover { opacity: 0.9; } @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.3; } } ::selection { background: ${ACCENT_LIGHT}; color: ${DARK}; } .nav-links-desktop { display: flex; } .nav-hamburger { display: none !important; } .nav-mobile-dropdown { display: none !important; } @media (max-width: 768px) { .nav-links-desktop { display: none !important; } .nav-hamburger { display: flex !important; } .nav-mobile-dropdown { display: block !important; } }`}</style>
+      <style>{`@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&family=Instrument+Serif:ital@0;1&display=swap'); *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; } html { scroll-behavior: smooth; scroll-padding-top: 56px; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; } body { background: ${WHITE}; color: ${DARK}; overflow-x: hidden; } button { border: none; outline: none; } a:hover { opacity: 0.85; } button:hover { opacity: 0.9; } ::selection { background: ${ACCENT_LIGHT}; color: ${DARK}; } .nav-links-desktop { display: flex; } .nav-hamburger { display: none !important; } .nav-mobile-dropdown { display: none !important; } @media (max-width: 768px) { .nav-links-desktop { display: none !important; } .nav-hamburger { display: flex !important; } .nav-mobile-dropdown { display: block !important; } }`}</style>
       <div style={{ background: WHITE, minHeight: "100vh", width: "100%" }}>
         <div style={{ maxWidth: "1100px", margin: "0 auto" }}>
           <FloatingNav />
