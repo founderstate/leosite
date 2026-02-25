@@ -894,6 +894,7 @@ function PressSection() {
   const press = [
     { name: "The New York Times", url: "https://www.nytimes.com/1999/12/20/movies/technology-media-film-s-digital-potential-has-hollywood-on-edge.html" },
     { name: "Variety", url: "https://variety.com/2002/digital/markets-festivals/you-are-surrounded-by-obscura-1117868217/" },
+    { name: "Sphere Entertainment", url: "https://investor.sphereentertainmentco.com/press-releases/news-details/2017/The-Madison-Square-Garden-Company-Announces-Acquisition-of-Obscura-Digital/default.aspx" },
     { name: "TechCrunch", url: "https://techcrunch.com/2006/10/25/veeker-an-embedded-player-for-mobile-video/" },
     { name: "GamesBeat", url: "https://gamesbeat.com/nukotoys-aims-to-be-silicon-valleys-toy-company/" },
     { name: "PBS", url: "https://www.pbs.org/newshour/world/correcting-clubfoot" },
