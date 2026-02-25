@@ -417,7 +417,10 @@ function PatternSection() {
       industry: "Internet video / digital media",
       outcome: "First major user-generated video platform on the internet — six years before YouTube. Pioneered online video distribution and advertising-supported free streaming when the industry said bandwidth couldn’t support it. Viacom acquired IFILM.com for $49M. Total IFILM enterprise asset sales exceeded $100M.",
       video: "https://vimeo.com/79609746",
-      press: { label: "The New York Times", url: "https://www.nytimes.com/1999/12/20/movies/technology-media-film-s-digital-potential-has-hollywood-on-edge.html" },
+      press: [
+        { label: "The New York Times", url: "https://www.nytimes.com/1999/12/20/movies/technology-media-film-s-digital-potential-has-hollywood-on-edge.html" },
+        { label: "CNET", url: "https://www.cnet.com/tech/tech-industry/mtv-buys-ifilm-for-49-million/" },
+      ],
     },
     {
       year: "2000\u20132017",
