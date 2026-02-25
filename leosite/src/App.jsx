@@ -455,6 +455,7 @@ function PatternSection() {
       video: "https://vimeo.com/42738280",
       press: [
         { label: "GamesBeat", url: "https://gamesbeat.com/nukotoys-aims-to-be-silicon-valleys-toy-company/" },
+        { label: "CNET", url: "https://www.cnet.com/culture/nukotoys-aims-for-next-generation-toy-empire/" },
         { label: "The ToyBook", url: "https://toybook.com/nukotoys-combines-real-world-toys-and-mobile-games/" },
       ],
       extraVideos: [
