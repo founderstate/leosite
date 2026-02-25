@@ -1223,7 +1223,7 @@ function ContactSection() {
             fontSize: "12px",
             color: GRAY,
             fontFamily: "'DM Sans', sans-serif",
-          }}>Pretty Well Fit \u2014 Leo Raderman</span>
+          }}>Leo Raderman</span>
           <span style={{
             fontSize: "12px",
             color: GRAY,
