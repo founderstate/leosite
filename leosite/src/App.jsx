@@ -334,7 +334,7 @@ function Hero() {
           lineHeight: 1.65,
           fontWeight: 400,
         }}>
-          $100M+ largest exit. 5,000+ retail locations. $65M+ raised across
+          $100M+ largest exit. 2,500+ retail doors. $65M+ raised across
           internet video, immersive technology, mobile communication,
           physical-digital toys, and global healthcare.
         </p>
@@ -365,7 +365,7 @@ function NumbersBar() {
     { number: "5", label: "Companies Founded" },
     { number: "$100M+", label: "Largest Exit" },
     { number: "$65M+", label: "Capital Raised" },
-    { number: "5,000+", label: "Retail Locations" },
+    { number: "2,500+", label: "Retail Doors" },
   ];
   return (
     <section id="pattern" style={{
@@ -445,7 +445,7 @@ function PatternSection() {
       company: "Nukotoys",
       role: "Co-Founder, Co-CEO",
       industry: "Apps/video game and physical toys integration",
-      outcome: "Created collectible trading cards that activated in-game characters with a tap on the screen — bridging physical toys and digital play. Licensed with Animal Planet and Ology Books. 5,000+ retail locations including Apple, Walmart, Target, Toys-R-Us, Barnes & Noble. VentureBeat Best Mobile App 2012. Parenting Magazine Best Toy 2012.",
+      outcome: "Created collectible trading cards that activated in-game characters with a tap on the screen — bridging physical toys and digital play. Licensed with Animal Planet and Ology Books. 2,500+ retail doors including Apple, Walmart, Target, Toys-R-Us, Barnes & Noble. VentureBeat Best Mobile App 2012. Parenting Magazine Best Toy 2012.",
       video: "https://vimeo.com/42738280",
       press: { label: "GamesBeat", url: "https://gamesbeat.com/nukotoys-aims-to-be-silicon-valleys-toy-company/" },
       extraVideos: [
