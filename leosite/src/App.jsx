@@ -941,7 +941,7 @@ function PressSection() {
         flexWrap: "wrap",
         gap: "10px",
         marginBottom: "clamp(24px, 4vw, 36px)",
-        maxWidth: "740px",
+        maxWidth: "900px",
       }}>
         {press.map((p, i) => (
           <FadeIn key={i} delay={i * 0.03}>
