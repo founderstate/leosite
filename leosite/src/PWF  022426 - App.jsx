@@ -283,11 +283,14 @@ function Hero() {
     }}>
       <FadeIn>
         <div style={{
-          width: "3px",
-          height: "clamp(24px, 3vw, 32px)",
-          background: ACCENT,
-          marginBottom: "clamp(16px, 3vw, 28px)",
-        }} />
+          fontSize: "clamp(11px, 1.4vw, 13px)",
+          letterSpacing: "0.2em",
+          textTransform: "uppercase",
+          color: ACCENT,
+          fontWeight: 600,
+          marginBottom: "clamp(16px, 3vw, 32px)",
+          fontFamily: "'DM Sans', sans-serif",
+        }}>Pretty Well Fit</div>
       </FadeIn>
       <FadeIn delay={0.1}>
         <h1 style={{
