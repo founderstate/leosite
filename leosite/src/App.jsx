@@ -427,7 +427,10 @@ function PatternSection() {
       industry: "Immersive video / experiential technology",
       outcome: "Pioneered immersive architectural projection mapping — projecting onto the Empire State Building, the Vatican, the Sydney Opera House — alighting imagination on landmarks worldwide. Company later acquired by Madison Square Garden Company. Core technology inspired and now powers The Sphere, Las Vegas.",
       video: "https://vimeo.com/260863020",
-      press: { label: "Variety", url: "https://variety.com/2002/digital/markets-festivals/you-are-surrounded-by-obscura-1117868217/" },
+      press: [
+        { label: "Variety", url: "https://variety.com/2002/digital/markets-festivals/you-are-surrounded-by-obscura-1117868217/" },
+        { label: "Sphere Entertainment", url: "https://investor.sphereentertainmentco.com/press-releases/news-details/2017/The-Madison-Square-Garden-Company-Announces-Acquisition-of-Obscura-Digital/default.aspx" },
+      ],
     },
     {
       year: "2006\u20132008",
@@ -447,7 +450,10 @@ function PatternSection() {
       industry: "Apps/video game and physical toys integration",
       outcome: "Created collectible trading cards that activated in-game characters with a tap on the screen — bridging physical toys and digital play. Licensed with Animal Planet and Ology Books. 2,500+ retail doors including Apple, Walmart, Target, Toys-R-Us, Barnes & Noble. VentureBeat Best Mobile App 2012. Parenting Magazine Best Toy 2012.",
       video: "https://vimeo.com/42738280",
-      press: { label: "GamesBeat", url: "https://gamesbeat.com/nukotoys-aims-to-be-silicon-valleys-toy-company/" },
+      press: [
+        { label: "GamesBeat", url: "https://gamesbeat.com/nukotoys-aims-to-be-silicon-valleys-toy-company/" },
+        { label: "The ToyBook", url: "https://toybook.com/nukotoys-combines-real-world-toys-and-mobile-games/" },
+      ],
       extraVideos: [
         { url: "https://vimeo.com/36580567", label: "Learn" },
         { url: "https://vimeo.com/47917689", label: "Gameplay" },
@@ -573,8 +579,8 @@ function PatternSection() {
                         letterSpacing: "0.05em",
                       }}>{ev.label} {"→"}</a>
                     ))}
-                    {item.press && (
-                      <a href={item.press.url} target="_blank" rel="noopener noreferrer" style={{
+                    {item.press && (Array.isArray(item.press) ? item.press : [item.press]).map((p, pi) => (
+                      <a key={pi} href={p.url} target="_blank" rel="noopener noreferrer" style={{
                         fontSize: "clamp(11px, 1.2vw, 13px)",
                         color: GRAY,
                         textDecoration: "none",
@@ -583,8 +589,8 @@ function PatternSection() {
                         letterSpacing: "0.05em",
                         borderLeft: `1px solid ${BORDER}`,
                         paddingLeft: "12px",
-                      }}>{item.press.label} {"→"}</a>
-                    )}
+                      }}>{p.label} {"→"}</a>
+                    ))}
                   </div>
                 )}
               </div>
