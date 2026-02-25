@@ -907,6 +907,9 @@ function PressSection() {
     { name: "GamesBeat", url: "https://gamesbeat.com/nukotoys-aims-to-be-silicon-valleys-toy-company/" },
     { name: "Communication Arts", url: "https://www.commarts.com/features/obscura-digital" },
     { name: "GQ", url: null },
+    { name: "The ToyBook", url: "https://toybook.com/nukotoys-combines-real-world-toys-and-mobile-games/" },
+    { name: "InformationWeek", url: "https://www.informationweek.com/it-leadership/brief-veeker-gets-mobile-video-uploaded-to-web" },
+    { name: "Crain's New York", url: "https://www.crainsnewyork.com/article/19980420/SUB/804200739/saatchi-unit-is-latest-entry-in-survival-of-fittest-game-darwin-digital-must-try-to-catch-up-with-more-established-int" },
   ];
   return (
     <section id="coverage" style={{
