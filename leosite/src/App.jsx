@@ -420,7 +420,7 @@ function PatternSection() {
       press: [
         { label: "The New York Times", url: "https://www.nytimes.com/1999/12/20/movies/technology-media-film-s-digital-potential-has-hollywood-on-edge.html" },
         { label: "The Wall Street Journal", url: "https://www.wsj.com/articles/SB920333393213927000?mod=Searchresults&pos=2&page=1" },
-        { label: "(Free Version)", url: "https://www.deseret.com/1999/3/2/19432126/pc-matinee-the-race-is-on-to-make-web-a-cyber-cinema/" },
+        { label: "(Free)", url: "https://www.deseret.com/1999/3/2/19432126/pc-matinee-the-race-is-on-to-make-web-a-cyber-cinema/" },
         { label: "CNET", url: "https://www.cnet.com/tech/tech-industry/mtv-buys-ifilm-for-49-million/" },
       ],
     },
@@ -596,7 +596,7 @@ function PatternSection() {
                         fontFamily: "'DM Sans', sans-serif",
                         letterSpacing: "0.05em",
                         ...(!isParenthetical && { borderLeft: `1px solid ${BORDER}`, paddingLeft: "12px" }),
-                        ...(isParenthetical && { marginLeft: "4px" }),
+                        ...(isParenthetical && { marginLeft: "4px", fontWeight: 400 }),
                       }}>{p.label}{!isParenthetical && <>{" →"}</>}</a>
                       );
                     })}
