@@ -1074,7 +1074,7 @@ function WhySection() {
     {
       number: "01",
       title: "Cross-Industry Range",
-      text: "Internet video, immersive technology, toys, mobile communications, cannabis, advertising, non-profit healthcare. Working from first principles that transfer across domains — not pattern-matching to one industry’s playbook.",
+      text: "Internet video, immersive technology, mobile communications, toys, non-profit healthcare. Working from first principles that transfer across domains — not pattern-matching to one industry’s playbook.",
     },
     {
       number: "02",
@@ -1084,7 +1084,7 @@ function WhySection() {
     {
       number: "03",
       title: "Category Creation",
-      text: "The rarest capability. Building categories that don’t exist yet requires educating consumers before selling to them, creating mental models where none exist, and building infrastructure without benchmarks. Executed five times over twenty-five years.",
+      text: "The rarest capability. Building categories that don’t exist yet requires educating consumers before selling to them, creating mental models where none exist, and building infrastructure without benchmarks. Executed five times.",
     },
   ];
   return (
