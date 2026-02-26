@@ -440,7 +440,7 @@ function PatternSection() {
       year: "2006\u20132008",
       question: "“What’s mobile video communication?”",
       company: "Veeker",
-      role: "Co-Founder, Chief Market & Product Officer",
+      role: "Co-Founder, Chief Product Officer & Chief Marketing Officer",
       industry: "Cell phone photo and video platform",
       outcome: "Enabled mobile video and photo sharing pre-iPhone, pre-Instagram. First to deliver user-generated video clips to NBC News. TechCrunch wrote: 'Critics contend that mass market extensive use of mobile video is unlikely. Obviously Veeker is a company betting otherwise.'",
       video: "https://youtu.be/wSWtwIAzuyA",
