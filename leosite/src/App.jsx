@@ -419,6 +419,7 @@ function PatternSection() {
       video: "https://vimeo.com/79609746",
       press: [
         { label: "The New York Times", url: "https://www.nytimes.com/1999/12/20/movies/technology-media-film-s-digital-potential-has-hollywood-on-edge.html" },
+        { label: "The Wall Street Journal", url: "https://www.wsj.com/articles/SB920333393213927000?mod=Searchresults&pos=2&page=1" },
         { label: "CNET", url: "https://www.cnet.com/tech/tech-industry/mtv-buys-ifilm-for-49-million/" },
       ],
     },
@@ -909,7 +910,7 @@ function PressSection() {
     { name: "GamesBeat", url: "https://gamesbeat.com/nukotoys-aims-to-be-silicon-valleys-toy-company/" },
     { name: "PBS", url: "https://www.pbs.org/newshour/world/correcting-clubfoot" },
     { name: "Bloomberg", url: "https://www.bloomberg.com/news/articles/2013-05-09/bluescape-the-touchscreen-that-covers-a-wall" },
-    { name: "The Wall Street Journal", url: null },
+    { name: "The Wall Street Journal", url: "https://www.wsj.com/articles/SB920333393213927000?mod=Searchresults&pos=2&page=1" },
     { name: "The Hollywood Reporter", url: null },
     { name: "Wired", url: "https://www.wired.com/story/obscura-digital-protests-projection-mapping-the-vatican/" },
     { name: "CNET", url: "https://www.cnet.com/culture/nukotoys-aims-for-next-generation-toy-empire/" },
