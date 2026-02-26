@@ -420,6 +420,7 @@ function PatternSection() {
       press: [
         { label: "The New York Times", url: "https://www.nytimes.com/1999/12/20/movies/technology-media-film-s-digital-potential-has-hollywood-on-edge.html" },
         { label: "The Wall Street Journal", url: "https://www.wsj.com/articles/SB920333393213927000?mod=Searchresults&pos=2&page=1" },
+        { label: "(Free Version)", url: "https://www.deseret.com/1999/3/2/19432126/pc-matinee-the-race-is-on-to-make-web-a-cyber-cinema/" },
         { label: "CNET", url: "https://www.cnet.com/tech/tech-industry/mtv-buys-ifilm-for-49-million/" },
       ],
     },
@@ -584,7 +585,9 @@ function PatternSection() {
                         letterSpacing: "0.05em",
                       }}>{ev.label} {"→"}</a>
                     ))}
-                    {item.press && (Array.isArray(item.press) ? item.press : [item.press]).map((p, pi) => (
+                    {item.press && (Array.isArray(item.press) ? item.press : [item.press]).map((p, pi) => {
+                      const isParenthetical = p.label.startsWith("(");
+                      return (
                       <a key={pi} href={p.url} target="_blank" rel="noopener noreferrer" style={{
                         fontSize: "clamp(11px, 1.2vw, 13px)",
                         color: GRAY,
@@ -592,10 +595,11 @@ function PatternSection() {
                         fontWeight: 600,
                         fontFamily: "'DM Sans', sans-serif",
                         letterSpacing: "0.05em",
-                        borderLeft: `1px solid ${BORDER}`,
-                        paddingLeft: "12px",
-                      }}>{p.label} {"→"}</a>
-                    ))}
+                        ...(!isParenthetical && { borderLeft: `1px solid ${BORDER}`, paddingLeft: "12px" }),
+                        ...(isParenthetical && { marginLeft: "4px" }),
+                      }}>{p.label}{!isParenthetical && <>{" →"}</>}</a>
+                      );
+                    })}
                   </div>
                 )}
               </div>
