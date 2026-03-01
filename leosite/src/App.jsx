@@ -659,7 +659,7 @@ function PatternSection() {
                   fontWeight: 600,
                   color: DARK,
                   fontFamily: "'DM Sans', sans-serif",
-                }}>{item.url ? <a href={item.url} target="_blank" rel="noopener noreferrer" style={{ color: DARK, textDecoration: "none", borderBottom: `1px solid ${BORDER}` }}>{item.company}</a> : item.company}</span>
+                }}>{item.company}</span>
                 <span style={{
                   fontSize: "clamp(12px, 1.3vw, 13px)",
                   color: ACCENT,
